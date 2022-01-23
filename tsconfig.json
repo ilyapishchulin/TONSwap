@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "outDir": "build",
+    "baseUrl": "src",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "isolatedModules": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": false,
+    "noEmit": true,
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
