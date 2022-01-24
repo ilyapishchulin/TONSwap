@@ -1,0 +1,12 @@
+.Headline {
+  font-family: var(--FFMulish);
+  font-size: 17px;
+}
+
+.Headline--semibold {
+  font-weight: 600;
+}
+
+.Headline--bold {
+  font-weight: 700;
+}

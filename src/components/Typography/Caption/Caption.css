@@ -1,0 +1,16 @@
+.Caption {
+  font-family: var(--FFMulish);
+  font-size: 13px;
+}
+
+.Caption--regular {
+  font-weight: 400;
+}
+
+.Caption--semibold {
+  font-weight: 600;
+}
+
+.Caption--bold {
+  font-weight: 700;
+}

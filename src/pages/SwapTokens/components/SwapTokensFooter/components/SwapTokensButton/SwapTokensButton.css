@@ -1,0 +1,23 @@
+.SwapTokensButton {
+  cursor: pointer;
+  margin-left: auto;
+
+  padding: 0;
+  border: none;
+  outline: none;
+
+  /* @TODO token */
+  background: rgba(0, 136, 204, 0.05);
+  border-radius: 16px;
+}
+
+.SwapTokensButton[disabled] {
+  opacity: .5;
+}
+
+.SwapTokensButton__text {
+  margin: 0;
+  padding: 16px 20px;
+
+  color: var(--accent_color);
+}

@@ -1,0 +1,20 @@
+import { FC } from 'react';
+import { useSelector } from 'react-redux';
+import './PageTabs.css';
+
+import { EPages } from 'enums/EPages';
+import { router } from 'utils/router';
+import { selectActivePage } from 'store/router/selectors/selectActivePage';
+
+import { PageTab } from './components/PageTab/PageTab';
+
+export const PageTabs: FC = () => {
+  const activePage = useSelector(selectActivePage);
+
+  return (
+    <div className="PageTabs">
+      <PageTab onClick={() => router.openPage(EPages.Swap)} isActive={[EPages.Home, EPages.Swap].includes(activePage)} text="Swap" />
+      <PageTab onClick={() => router.openPage(EPages.Pools)} isActive={activePage === EPages.Pools} text="Pools" />
+    </div>
+  );
+}

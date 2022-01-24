@@ -1,0 +1,27 @@
+.Title {
+  font-family: var(--FFMulish);
+}
+
+.Title--level1 {
+  font-size: 25px;
+}
+
+.Title--level2 {
+  font-size: 21px;
+}
+
+.Title--level3 {
+  font-size: 19px;
+}
+
+.Title--semibold {
+  font-weight: 600;
+}
+
+.Title--bold {
+  font-weight: 700;
+}
+
+.Title--extrabold {
+  font-weight: 800;
+}

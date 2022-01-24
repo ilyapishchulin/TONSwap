@@ -1,0 +1,16 @@
+body {
+  --FFMulish: 'Mulish';
+
+  --icon_secondary: #CECECE;
+  --accent_color: #0088CC;
+  --island_background: #FFFFFF;
+  --page_background: linear-gradient(180deg, #FAFAFA 0, #FCFCFC 100%);
+  --primary_background: #F3F3F3;
+  --quaternary_background: #FCFCFC;
+  --tertiary_background: #F8F8F8;
+  --stroke_tertiary: #F0F0F0;
+
+  --text_primary: #303757;
+  --text_secondary: #6C6C6C;
+  --text_quartenary: #B6B6B6;
+}

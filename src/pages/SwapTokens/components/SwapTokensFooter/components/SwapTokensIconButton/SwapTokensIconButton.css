@@ -1,0 +1,27 @@
+.SwapTokensIconButton {
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  padding: 0;
+  outline: none;
+
+  margin-right: 8px;
+  border-radius: 50%;
+
+  color: var(--text_secondary);
+  background: var(--tertiary_background);
+}
+
+.SwapTokensIconButton:hover {
+  background: var(--stroke_tertiary);
+}
+
+.SwapTokensIconButton:first-child {
+  margin-left: 4px;
+}

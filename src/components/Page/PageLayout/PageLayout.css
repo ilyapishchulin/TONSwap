@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  background: var(--page_background);
+}
+
+.PageLayout {
+  --page_vertical_margin: 44px;
+  --page_min_height: calc(100vh - var(--page_vertical_margin) * 2 - env(--safe-area-inset-bottom, 0px) - env(--safe-area-inset-top, 0px));
+
+
+  min-height: var(--page_min_height);
+  max-width: 1232px;
+  margin: var(--page_vertical_margin) auto;
+}

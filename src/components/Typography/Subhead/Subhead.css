@@ -1,0 +1,16 @@
+.Subhead {
+  font-family: var(--FFMulish);
+  font-size: 15px;
+}
+
+.Subhead--medium {
+  font-weight: 500;
+}
+
+.Subhead--semibold {
+  font-weight: 600;
+}
+
+.Subhead--bold {
+  font-weight: 700;
+}

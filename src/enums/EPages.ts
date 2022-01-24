@@ -1,4 +1,5 @@
 export enum EPages {
   Home = '/',
-  HomeWithSubPath = '/path/path',
+  Swap = '/swap',
+  Pools = '/pools',
 }

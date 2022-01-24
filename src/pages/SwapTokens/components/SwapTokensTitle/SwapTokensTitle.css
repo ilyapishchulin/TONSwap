@@ -1,0 +1,7 @@
+.SwapTokensTitle {
+  user-select: none;
+  text-align: center;
+
+  margin: 23px 0 19px 0;
+  color: var(--text_primary);
+}

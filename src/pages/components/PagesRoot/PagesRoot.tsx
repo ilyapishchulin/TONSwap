@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { EPages } from 'enums/EPages';
 
 import { selectActivePage } from 'store/router/selectors/selectActivePage';
-import { Home } from 'pages/Home/Home';
+import { SwapTokens } from 'pages/SwapTokens/SwapTokens';
 
 export const PagesRoot = () => {
   const activePage = useSelector(selectActivePage);
@@ -11,7 +11,8 @@ export const PagesRoot = () => {
   let PageComponent = null
   switch (activePage) {
     case EPages.Home:
-      PageComponent = Home;
+    case EPages.Swap:
+      PageComponent = SwapTokens;
       break;
   }
 
@@ -19,9 +20,5 @@ export const PagesRoot = () => {
     return null;
   }
 
-  return (
-    <div className="PagesRoot">
-      <PageComponent />
-    </div>
-  );
+  return <PageComponent />;
 }

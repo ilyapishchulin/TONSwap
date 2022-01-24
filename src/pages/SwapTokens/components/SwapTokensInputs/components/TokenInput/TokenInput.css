@@ -1,0 +1,61 @@
+.TokenInput {
+  display: block;
+  width: 100%;
+
+  padding: 16px;
+  margin-top: 12px;
+
+  border: 1px solid #F0F0F0;
+  border-radius: 20px;
+
+  background: var(--quaternary_background);
+  box-sizing: border-box;
+}
+
+.TokenInput:last-child {
+  margin-bottom: 20px;
+}
+
+.TokenInputFields {
+  display: flex;
+}
+
+.TokenInputFields__input {
+  width: 100%;
+  height: 31px;
+
+  font-family: var(--FFMulish);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 31px;
+
+  padding: 0;
+  margin-right: 20px;
+
+  border: none;
+  outline: none;
+  background: none;
+
+  color: var(--text_primary);
+}
+
+.TokenInputFields__input::placeholder {
+  color: var(--icon_secondary);
+}
+
+.TokenInputCountingFields {
+  display: flex;
+  margin-top: 5px;
+}
+
+.TokenInputCountingFields__transfer {
+  flex: 1;
+  margin: 0;
+  color: var(--text_secondary);
+}
+
+.TokenInputCountingFields__balance {
+  margin-top: 4px;
+  color: var(--text_quartenary);
+}

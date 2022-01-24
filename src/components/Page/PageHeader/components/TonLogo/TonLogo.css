@@ -1,0 +1,9 @@
+.TonLogo {
+  display: flex;
+  align-items: center;
+}
+
+.TonLogo__title {
+  margin: 0 0 0 12px;
+  color: var(--text_primary);
+}

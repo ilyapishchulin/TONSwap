@@ -1,0 +1,23 @@
+.PageTab {
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-right: 8px;
+
+  color: var(--text_secondary);
+  box-shadow: 0 4px 38px rgba(0, 0, 0, .02);
+  border-radius: 12px;
+}
+
+.PageTab:hover:not(.PageTab--active) {
+  background: var(--primary_background);
+}
+
+.PageTab:last-child {
+  margin-right: 0;
+}
+
+.PageTab--active {
+  cursor: default;
+  color: var(--text_primary);
+  background: var(--island_background);
+}
