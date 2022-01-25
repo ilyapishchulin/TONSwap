@@ -5,7 +5,9 @@ import './ModalRoot.css';
 
 import { router } from 'utils/router';
 import { EModals } from 'enums/EModals';
+
 import { SettingsModal } from 'modals/SettingModal/SettingsModal';
+import { SelectToken } from 'modals/SelectToken/SelectToken';
 
 import { selectActiveModal } from 'store/router/selectors/selectActiveModal';
 
@@ -14,8 +16,12 @@ export const ModalRoot: FC<TModalRoot> = () => {
 
   let ModalComponent = null;
   switch (activeModal) {
-    case EModals.Settings:
+    case EModals.SWAP_SETTINGS:
       ModalComponent = SettingsModal;
+      break;
+
+    case EModals.SELECT_TOKEN:
+      ModalComponent = SelectToken;
       break;
   }
 
@@ -25,7 +31,7 @@ export const ModalRoot: FC<TModalRoot> = () => {
 
   return (
     <div className="ModalRootWrapper" onClick={router.closeModal}>
-      <div className="ModalRoot" onClick={(e) => e.stopPropagation()}>
+      <div id={activeModal} className="ModalRoot" onClick={(e) => e.stopPropagation()}>
         <ModalComponent />
       </div>
     </div>

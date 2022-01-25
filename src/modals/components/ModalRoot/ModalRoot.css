@@ -10,12 +10,22 @@
   align-items: center;
   justify-content: center;
 
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, .25);
 }
 
 .ModalRoot {
-  width: 300px;
-  height: 300px;
+  max-width: 322px;
+  width: 100%;
+  min-height: 300px;
 
-  background: white;
+  box-shadow: 0 4px 250px rgba(0, 0, 0, .02);
+  border-radius: 24px;
+
+  overflow: hidden;
+  background: var(--island_background);
+}
+
+#SelectToken {
+  max-width: 368px;
+  max-height: 552px;
 }

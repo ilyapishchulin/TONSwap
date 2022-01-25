@@ -1,0 +1,49 @@
+.TokenCell {
+  cursor: pointer;
+  max-width: 100%;
+  width: auto;
+
+  margin: 0 8px;
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.TokenCell:hover {
+  background: var(--tertiary_background);
+}
+
+.TokenCell__cover {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+}
+
+.TokenCellFields {
+  margin: 8px 12px;
+  overflow: hidden;
+}
+
+.TokenCellFields__ticker,
+.TokenCellFields__name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.TokenCellFields__ticker {
+  margin: 0;
+
+  text-transform: uppercase;
+  color: var(--text_primary);
+}
+
+.TokenCellFields__name {
+  margin: 2px 0 0 0;
+  color: var(--text_tertiary);
+}

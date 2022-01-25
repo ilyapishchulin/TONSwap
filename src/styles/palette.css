@@ -8,9 +8,12 @@ body {
   --primary_background: #F3F3F3;
   --quaternary_background: #FCFCFC;
   --tertiary_background: #F8F8F8;
+
+  --stroke_primary: #D2D2D2;
   --stroke_tertiary: #F0F0F0;
 
   --text_primary: #303757;
   --text_secondary: #6C6C6C;
   --text_quartenary: #B6B6B6;
+  --text_tertiary: #A8A8A8;
 }

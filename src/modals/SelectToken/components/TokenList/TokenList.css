@@ -1,0 +1,7 @@
+.TokenList {
+  margin: 0;
+  padding: 0 0 20px 0;
+
+  max-height: calc(var(--page_min_height) / 2);
+  overflow: scroll;
+}

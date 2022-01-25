@@ -1,3 +1,4 @@
 export enum EModals {
-  Settings = 'Settings',
+  SWAP_SETTINGS = 'SwapSettings',
+  SELECT_TOKEN = 'SelectToken',
 }

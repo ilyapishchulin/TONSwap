@@ -1,0 +1,17 @@
+.ModalHeader {
+  display: flex;
+  align-items: center;
+
+  padding: 20px 20px 12px 20px;
+  margin-bottom: 8px;
+}
+
+.ModalHeader__title {
+  flex: 1;
+  margin: 0 12px 0 0;
+  color: var(--text_primary);
+}
+
+.ModalHeader__icon {
+  cursor: pointer;
+}

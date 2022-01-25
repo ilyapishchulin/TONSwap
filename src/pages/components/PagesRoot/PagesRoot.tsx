@@ -10,8 +10,8 @@ export const PagesRoot = () => {
 
   let PageComponent = null
   switch (activePage) {
-    case EPages.Home:
-    case EPages.Swap:
+    case EPages.HOME:
+    case EPages.SWAP:
       PageComponent = SwapTokens;
       break;
   }

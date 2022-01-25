@@ -1,0 +1,49 @@
+.SettingsFormItem:not(:first-child) {
+  margin-top: 24px;
+}
+
+.SettingsFormItem__top {
+  color: var(--text_secondary);
+  margin: 0 12px 0 0;
+}
+
+.SettingsFormItemFields {
+  display: flex;
+  align-items: center;
+
+  background: var(--tertiary_background);
+  border: 1px solid var(--stroke_tertiary);
+  border-radius: 12px;
+
+  margin: 12px 0;
+}
+
+.SettingsFormItemFields__input {
+  flex: 1 1 0;
+
+  outline: none;
+  background: none;
+  border: none;
+  margin: 0;
+
+  padding: 12px;
+  font-family: var(--FFMulish);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: var(--text_primary);
+}
+
+.SettingsFormItemFields__input::placeholder {
+  color: var(--text_tertiary);
+}
+
+.SettingsFormItemFields__after {
+  padding-right: 12px;
+  color: var(--text_quartenary);
+}
+
+.SettingsFormItem__bottom {
+  color: var(--text_tertiary);
+}

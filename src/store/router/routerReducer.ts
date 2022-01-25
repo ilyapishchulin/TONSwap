@@ -8,6 +8,8 @@ import { ACTIVE_MODAL_CLEAR } from './sets/activeModal/clearActiveModal';
 import { actionClearActiveModal } from './actions/activeModal/actionClearActiveModal';
 import { ACTIVE_PAGE_SET } from './sets/activePage/setActivePage';
 import { actionSetActivePage } from './actions/actionSetActivePage';
+import { ROUTER_PARAMS_SET } from './sets/setRouterParams';
+import { actionSetRouterParams } from './actions/actionSetRouterParams';
 
 export const routerReducer = (
   state = routerStore,
@@ -22,6 +24,9 @@ export const routerReducer = (
 
     case ACTIVE_PAGE_SET:
       return actionSetActivePage(state, action.data);
+
+    case ROUTER_PARAMS_SET:
+      return actionSetRouterParams(state, action.data);
 
     default:
       return state;

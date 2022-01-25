@@ -13,8 +13,8 @@ export const PageTabs: FC = () => {
 
   return (
     <div className="PageTabs">
-      <PageTab onClick={() => router.openPage(EPages.Swap)} isActive={[EPages.Home, EPages.Swap].includes(activePage)} text="Swap" />
-      <PageTab onClick={() => router.openPage(EPages.Pools)} isActive={activePage === EPages.Pools} text="Pools" />
+      <PageTab onClick={() => router.openPage(EPages.SWAP)} isActive={[EPages.HOME, EPages.SWAP].includes(activePage)} text="Swap" />
+      <PageTab onClick={() => router.openPage(EPages.POOLS)} isActive={activePage === EPages.POOLS} text="Pools" />
     </div>
   );
 }

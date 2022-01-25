@@ -13,17 +13,33 @@
   width: 16px;
   height: 16px;
 
-  margin: 2px 8px 0 0;
+  border-radius: 50%;
 }
 
+.SelectToken__image,
+.SelectToken__fakeToken {
+  margin-right: 8px;
+}
+
+.SelectToken__empty,
 .SelectToken__text {
-  color: var(--text_primary);
   text-transform: uppercase;
   margin: 0;
 }
 
+.SelectToken__empty {
+  color: var(--text_quartenary);
+}
+
+.SelectToken__text  {
+  color: var(--text_primary);
+}
+
 .SelectToken__icon {
   margin-left: 8px;
-  /* @TODO token */
-  color: #CECECE;
+  color: var(--icon_secondary);
+}
+
+.SelectToken__fakeToken {
+  color: var(--stroke_primary);
 }
