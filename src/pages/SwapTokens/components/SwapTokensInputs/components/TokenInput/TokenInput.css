@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+.TokenInput--focused {
+  border: 1px solid var(--accent_color);
+  box-shadow: 0 0 0 3px rgba(0, 136, 204, .15);
+}
+
 .TokenInput:last-child {
   margin-bottom: 20px;
 }
@@ -42,20 +47,4 @@
 
 .TokenInputFields__input::placeholder {
   color: var(--icon_secondary);
-}
-
-.TokenInputCountingFields {
-  display: flex;
-  margin-top: 5px;
-}
-
-.TokenInputCountingFields__transfer {
-  flex: 1;
-  margin: 0;
-  color: var(--text_secondary);
-}
-
-.TokenInputCountingFields__balance {
-  margin-top: 4px;
-  color: var(--text_quartenary);
 }

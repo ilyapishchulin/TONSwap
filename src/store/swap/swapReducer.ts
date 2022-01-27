@@ -4,10 +4,22 @@ import { TSwapSets } from './TSwapSets';
 
 import { TOKENS_SET } from './sets/setTokens';
 import { actionSetTokens } from './actions/actionSetTokens';
-import { FROM_TOKEN_SET } from './sets/setFromToken';
-import { actionSetFromToken } from './actions/actionSetFromToken';
-import { TO_TOKEN_SET } from './sets/setToToken';
-import { actionSetToToken } from './actions/actionSetToToken';
+import { EXCHANGE_FROM_TOKEN_SET } from './sets/setExchangeFromToken';
+import { actionSetExchangeFromToken } from './actions/actionSetExchangeFromToken';
+import { EXCHANGE_TO_TOKEN_SET } from './sets/setExchangeToToken';
+import { actionSetExchangeToToken } from './actions/actionSetExchangeToToken';
+import { EXCHANGE_FROM_SET } from './sets/setExchangeFrom';
+import { actionSetExchangeFrom } from './actions/actionSetExchangeFrom';
+import { EXCHANGE_TO_SET } from './sets/setExchangeTo';
+import { actionSetExchangeTo } from './actions/actionSetExchangeTo';
+import { EXCHANGE_COUNT_TO_SET } from './sets/setExchangeCountTo';
+import { actionSetExchangeCountTo } from './actions/actionSetExchangeCountTo';
+import { EXCHANGE_COUNT_FROM_SET } from './sets/setExchangeCountFrom';
+import { actionSetExchangeCountFrom } from './actions/actionSetExchangeCountFrom';
+import { DURATION_LIMIT_SET } from './sets/setDurationLimit';
+import { actionSetDurationLimit } from './actions/actionSetDurationLimit';
+import { SLIPPAGE_TOLERANCE_SET } from './sets/setSlippageTolerance';
+import { actionSetSlippageTolerance } from './actions/actionSetSlippageTolerance';
 
 export const swapReducer = (
   state = swapStore,
@@ -17,11 +29,29 @@ export const swapReducer = (
     case TOKENS_SET:
       return actionSetTokens(state, action.data);
 
-    case FROM_TOKEN_SET:
-      return actionSetFromToken(state, action.data);
+    case EXCHANGE_FROM_TOKEN_SET:
+      return actionSetExchangeFromToken(state, action.data);
 
-    case TO_TOKEN_SET:
-      return actionSetToToken(state, action.data);
+    case EXCHANGE_TO_TOKEN_SET:
+      return actionSetExchangeToToken(state, action.data);
+
+    case EXCHANGE_FROM_SET:
+      return actionSetExchangeFrom(state, action.data);
+
+    case EXCHANGE_TO_SET:
+      return actionSetExchangeTo(state, action.data);
+
+    case EXCHANGE_COUNT_FROM_SET:
+      return actionSetExchangeCountFrom(state, action.data);
+
+    case EXCHANGE_COUNT_TO_SET:
+      return actionSetExchangeCountTo(state, action.data);
+
+    case DURATION_LIMIT_SET:
+      return actionSetDurationLimit(state, action.data);
+
+    case SLIPPAGE_TOLERANCE_SET:
+      return actionSetSlippageTolerance(state, action.data);
 
     default:
       return state;

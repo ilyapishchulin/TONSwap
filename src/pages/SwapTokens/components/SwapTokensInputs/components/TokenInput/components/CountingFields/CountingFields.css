@@ -1,0 +1,23 @@
+.CountingFields {
+  display: flex;
+  margin-top: 5px;
+}
+
+.CountingFields__transfer {
+  flex: 1;
+  margin: 0;
+  color: var(--text_secondary);
+}
+
+.CountingFields__after {
+  margin-top: 4px;
+  color: var(--text_quartenary);
+}
+
+.CountingFields__transferMode--positive {
+  color: var(--severity_green);
+}
+
+.CountingFields__transferMode--negative {
+  color: var(--severity_orange);
+}

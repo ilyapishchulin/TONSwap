@@ -3,12 +3,12 @@ import './PageHeader.css';
 
 import { TonLogo } from './components/TonLogo/TonLogo';
 import { PageTabs } from './components/PageTabs/PageTabs';
-import { LoginButton } from './components/LoginButton/LoginButton';
+import { LoginOrAuthorizedButton } from './components/LoginOrAuthorizedButton/LoginOrAuthorizedButton';
 
 export const PageHeader: FC = () => (
   <header className="PageHeader">
     <TonLogo />
     <PageTabs />
-    <LoginButton />
+    <LoginOrAuthorizedButton />
   </header>
 );

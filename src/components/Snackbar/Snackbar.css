@@ -1,0 +1,67 @@
+.Snackbar {
+  position: absolute;
+  top: 54px;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  user-select: none;
+  padding: 8px 20px 8px 12px;
+  margin: env(--safe-area-inset-top) env(--safe-area-inset-right) env(--safe-area-inset-bottom) env(--safe-area-inset-left);
+
+  animation: horizontal-intro 340ms ease-in-out;
+  animation-fill-mode: forwards;
+
+  background: var(--island_background);
+  box-shadow: 0 4px 36px rgba(0, 0, 0, .05);
+  border-radius: 16px;
+}
+
+.Snackbar__before {
+  margin-right: 10px;
+}
+
+.Snackbar--endAnimation {
+  animation-name: horizontal-end;
+}
+
+.SnackbarFields__title,
+.SnackbarFields__description {
+  display: block;
+}
+
+.SnackbarFields__title {
+  margin: 0;
+  color: var(--text_primary);
+}
+
+.SnackbarFields__description {
+  margin-top: 2px;
+  color: var(--text_tertiary);
+}
+
+@keyframes horizontal-end {
+  from {
+    opacity: 1;
+    right: 100px;
+  }
+
+  to {
+    opacity: 0;
+    right: -400px;
+  }
+}
+
+@keyframes horizontal-intro {
+  from {
+    opacity: 0;
+    right: -50px;
+  }
+
+  to {
+    opacity: 1;
+    right: 100px;
+  }
+}
+

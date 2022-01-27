@@ -1,4 +1,6 @@
 .PageHeader {
   display: flex;
   align-items: center;
+
+  margin: 0 100px;
 }

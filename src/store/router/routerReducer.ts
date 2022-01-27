@@ -10,6 +10,8 @@ import { ACTIVE_PAGE_SET } from './sets/activePage/setActivePage';
 import { actionSetActivePage } from './actions/actionSetActivePage';
 import { ROUTER_PARAMS_SET } from './sets/setRouterParams';
 import { actionSetRouterParams } from './actions/actionSetRouterParams';
+import { SNACKBAR_NOTIFICATION_SET } from './sets/setSnackbarNotification';
+import { actionSetSnackbarNotification } from './actions/actionSetSnackbarNotification';
 
 export const routerReducer = (
   state = routerStore,
@@ -27,6 +29,9 @@ export const routerReducer = (
 
     case ROUTER_PARAMS_SET:
       return actionSetRouterParams(state, action.data);
+
+    case SNACKBAR_NOTIFICATION_SET:
+      return actionSetSnackbarNotification(state, action.data);
 
     default:
       return state;

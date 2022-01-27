@@ -1,0 +1,40 @@
+.SwapConfirmationButton {
+  cursor: pointer;
+  width: 50%;
+  border-radius: 16px;
+
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 14px 0;
+}
+
+.SwapConfirmationButton:first-child {
+  margin-right: 8px;
+}
+
+.SwapConfirmationButton--cancel {
+  color: var(--text_secondary);
+  background: none;
+}
+
+.SwapConfirmationButton--cancel:hover {
+  background: var(--tertiary_background);
+}
+
+.SwapConfirmationButton--cancel:active {
+  background: var(--primary_background);
+}
+
+.SwapConfirmationButton--confirm {
+  color: var(--accent_color);
+  background: var(--accent_background);
+}
+
+.SwapConfirmationButton--confirm:hover {
+  background: var(--accent_background_hover);
+}
+
+.SwapConfirmationButton--confirm:active {
+  background: var(--accent_background_click);
+}

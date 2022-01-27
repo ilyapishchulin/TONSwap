@@ -1,0 +1,16 @@
+.SettingsFormSaveButton {
+  cursor: pointer;
+  margin: 18px 10px 10px 10px;
+  padding: 14px 0;
+
+  border: none;
+  outline: none;
+
+  width: calc(100% - 20px);
+  background: var(--accent_background);
+  border-radius: 16px;
+}
+
+.SettingsFormSaveButton__text {
+  color: var(--accent_color);
+}

@@ -14,4 +14,13 @@
 
 .ModalHeader__icon {
   cursor: pointer;
+  color: var(--tertiary_background);
+}
+
+.ModalHeader__icon:hover {
+  color: var(--primary_background);
+}
+
+.ModalHeader__icon:active path {
+  opacity: .5;
 }

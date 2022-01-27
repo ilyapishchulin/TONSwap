@@ -1,7 +1,10 @@
 import { TToken } from 'types/TToken';
+import { TExchangeData } from 'types/TExchangeData';
 
 export type TSwapStore = {
-  fromToken?: TToken;
-  toToken?: TToken;
   tokens: TToken[],
+  exchangeFrom: TExchangeData;
+  exchangeTo: TExchangeData;
+  slippageTolerance: string;
+  durationLimit: string,
 };

@@ -1,0 +1,22 @@
+.SwapConfirmationCell {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 8px 20px 0 20px;
+}
+
+.SwapConfirmationCell__before {
+  margin: 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  color: var(--text_tertiary);
+}
+
+.SwapConfirmationCell__after {
+  margin: 0;
+
+  color: var(--text_primary);
+}

@@ -3,6 +3,11 @@ body {
 
   --icon_secondary: #CECECE;
   --accent_color: #0088CC;
+
+  --accent_background: rgba(0, 136, 204, .05);
+  --accent_background_hover: rgba(0, 136, 204, .15);
+  --accent_background_click: rgba(0, 136, 204, .25);
+
   --island_background: #FFFFFF;
   --page_background: linear-gradient(180deg, #FAFAFA 0, #FCFCFC 100%);
   --primary_background: #F3F3F3;
@@ -11,6 +16,10 @@ body {
 
   --stroke_primary: #D2D2D2;
   --stroke_tertiary: #F0F0F0;
+
+  --severity_red: #DA1919;
+  --severity_green: #3BCA09;
+  --severity_orange: #FF8616;
 
   --text_primary: #303757;
   --text_secondary: #6C6C6C;

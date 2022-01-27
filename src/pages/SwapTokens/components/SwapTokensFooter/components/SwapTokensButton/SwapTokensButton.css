@@ -6,12 +6,20 @@
   border: none;
   outline: none;
 
-  /* @TODO token */
-  background: rgba(0, 136, 204, 0.05);
+  background: var(--accent_background);
   border-radius: 16px;
 }
 
+.SwapTokensButton:not([disabled]):hover {
+  background: var(--accent_background_hover);
+}
+
+.SwapTokensButton:not([disabled]):active {
+  background: var(--accent_background_click);
+}
+
 .SwapTokensButton[disabled] {
+  cursor: auto;
   opacity: .5;
 }
 

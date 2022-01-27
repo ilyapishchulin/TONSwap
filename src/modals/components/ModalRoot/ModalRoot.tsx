@@ -3,13 +3,14 @@ import { useSelector } from 'react-redux';
 import { TModalRoot } from './TModalRoot';
 import './ModalRoot.css';
 
-import { router } from 'utils/router';
 import { EModals } from 'enums/EModals';
 
 import { SettingsModal } from 'modals/SettingModal/SettingsModal';
 import { SelectToken } from 'modals/SelectToken/SelectToken';
+import { SwapConfirmation } from 'modals/SwapConfirmation/SwapConfirmation';
 
 import { selectActiveModal } from 'store/router/selectors/selectActiveModal';
+import { Portal } from 'components/Portal/Portal';
 
 export const ModalRoot: FC<TModalRoot> = () => {
   const activeModal = useSelector(selectActiveModal);
@@ -23,6 +24,10 @@ export const ModalRoot: FC<TModalRoot> = () => {
     case EModals.SELECT_TOKEN:
       ModalComponent = SelectToken;
       break;
+
+    case EModals.SWAP_CONFIRMATION:
+      ModalComponent = SwapConfirmation;
+      break;
   }
 
   if (!ModalComponent) {
@@ -30,10 +35,10 @@ export const ModalRoot: FC<TModalRoot> = () => {
   }
 
   return (
-    <div className="ModalRootWrapper" onClick={router.closeModal}>
+    <Portal className="ModalRootWrapper">
       <div id={activeModal} className="ModalRoot" onClick={(e) => e.stopPropagation()}>
         <ModalComponent />
       </div>
-    </div>
+    </Portal>
   );
 }

@@ -1,0 +1,60 @@
+.SwapConfirmationTokenCell {
+  margin: 0 20px 16px 20px;
+}
+
+.SwapConfirmationTokenCell:first-child {
+  margin-top: 12px;
+}
+
+.SwapConfirmationTokenCell__top {
+  margin: 0;
+  color: var(--text_secondary);
+}
+
+.SwapConfirmationTokenCellInput {
+  margin-top: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  background: var(--tertiary_background);
+  border: 1px solid var(--stroke_tertiary);
+  border-radius: 16px;
+}
+
+.SwapConfirmationTokenCellInput__exchangeCount {
+  padding: 12px;
+  margin: 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  color: var(--text_secondary);
+}
+
+.SwapConfirmationTokenCellInputToken {
+  display: flex;
+  align-items: center;
+
+  padding: 5px 12px;
+  margin-right: 8px;
+
+  box-shadow: 0 4px 36px rgba(0, 0, 0, .05);
+  background: var(--island_background);
+  border-radius: 10px;
+}
+
+.SwapConfirmationTokenCellInputToken__cover {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+}
+
+.SwapConfirmationTokenCellInputToken__ticker {
+  text-transform: uppercase;
+  margin: 0 0 0 8px;
+}

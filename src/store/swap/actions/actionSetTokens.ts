@@ -1,9 +1,9 @@
 import { TSwapStore } from '../TSwapStore';
-import { TToken } from 'types/TToken';
+import { setTokens } from '../sets/setTokens';
 
 export const actionSetTokens = (
   state: TSwapStore,
-  tokens: TToken[],
+  tokens: ReturnType<typeof setTokens>['data'],
 ): TSwapStore => ({
   ...state,
   tokens,
