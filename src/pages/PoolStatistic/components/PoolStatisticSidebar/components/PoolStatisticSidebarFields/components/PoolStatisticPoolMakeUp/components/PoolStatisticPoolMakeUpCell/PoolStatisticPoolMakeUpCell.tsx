@@ -15,6 +15,6 @@ export const PoolStatisticPoolMakeUpCell: FC<TPoolStatisticPoolMakeUpCell> = ({ 
       srcSet={`${token.images[ETokenImages.MEDIUM]}, ${token.images[ETokenImages.MEDIUM_RETINA]} 2x`}
     />
     <Headline className="PoolStatisticPoolMakeUpCell__text" weight="bold">{token.ticker}</Headline>
-    <Headline className="PoolStatisticPoolMakeUpCell__percent" weight="bold">{makeUp}</Headline>
+    <Headline className="PoolStatisticPoolMakeUpCell__percent" weight="bold">{makeUp}%</Headline>
   </div>
 );

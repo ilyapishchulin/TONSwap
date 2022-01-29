@@ -2,30 +2,31 @@ import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import './PoolStatisticSidebarFields.css';
 
-import { selectTokens } from 'store/swap/selectors/selectTokens';
+import { selectCurrentPool } from 'store/currentPool/selectors/selectCurrentPool';
 
 import { PoolStatisticSidebarFiledVolume } from './components/PoolStatisticSidebarFiledVolume/PoolStatisticSidebarFiledVolume';
 import { PoolStatisticPoolMakeUp } from './components/PoolStatisticPoolMakeUp/PoolStatisticPoolMakeUp';
 import { PoolStatisticPercentage } from './components/PoolStatisticPercentage/PoolStatisticPercentage';
+import { PoolStatisticSidebarFieldsSkeletons } from './components/PoolStatisticSidebarFieldsSkeletons/PoolStatisticSidebarFieldsSkeletons';
 
 export const PoolStatisticSidebarFields: FC = () => {
-  const tokens = useSelector(selectTokens);
+  const currentPool = useSelector(selectCurrentPool);
 
-  if (tokens.length === 0) {
-    return null;
+  if (!currentPool.firstPoolToken || !currentPool.secondPoolToken) {
+    return <PoolStatisticSidebarFieldsSkeletons />;
   }
 
   return (
     <div className="PoolStatisticSidebarFields">
       <PoolStatisticSidebarFiledVolume percents={50} />
       <PoolStatisticPoolMakeUp
-        firstToken={tokens[0]}
-        firstMakeUp="50%"
-        secondToken={tokens[1]}
-        secondMakeUp="60%"
+        firstToken={currentPool.firstPoolToken}
+        firstMakeUp={currentPool.firstPoolMakeup}
+        secondToken={currentPool.secondPoolToken}
+        secondMakeUp={currentPool.secondPoolMakeup}
       />
-      <PoolStatisticPercentage title="Annual Percentage Yield" percent={-90} />
-      <PoolStatisticPercentage title="Annualized Fees" percent={32} />
+      <PoolStatisticPercentage title="Annual Percentage Yield" percent={currentPool.annualPercentageYield} />
+      <PoolStatisticPercentage title="Annualized Fees" percent={currentPool.annualizedFees} />
     </div>
   );
 }

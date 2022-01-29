@@ -9,6 +9,7 @@ import { clearActiveModal } from 'store/router/sets/activeModal/clearActiveModal
 import { setActivePage } from 'store/router/sets/activePage/setActivePage';
 import { setRouterParams } from 'store/router/sets/setRouterParams';
 import { getPageByPathAndSetIdInStore } from './getPageByPathAndSetIdInStore';
+import { clearCurrentPool } from '../store/currentPool/sets/clearCurrentPool';
 
 const { dispatch } = store;
 
@@ -31,6 +32,8 @@ class routerUtils {
   }
 
   openPage(page: EPages, routerParams: TRouterParams = {}) {
+    routerUtils.clearStatesByPage(page);
+
     dispatch(setActivePage(page));
     dispatch(setRouterParams(routerParams));
 
@@ -44,6 +47,14 @@ class routerUtils {
   openModal(modal: EModals, routerParams: TRouterParams = {}) {
     dispatch(setActiveModal(modal));
     dispatch(setRouterParams(routerParams));
+  }
+
+  private static clearStatesByPage(page: EPages) {
+    switch (page) {
+      case EPages.POOL_STATISTIC:
+        store.dispatch(clearCurrentPool());
+        break;
+    }
   }
 }
 

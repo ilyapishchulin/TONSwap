@@ -10,7 +10,7 @@ export const PoolStatisticPoolMakeUp: FC<TPoolStatisticPoolMakeUp> = memo(({
   secondToken,
   secondMakeUp,
 }) => (
-  <PoolStatisticSidebarFieldGroup title="Make up">
+  <PoolStatisticSidebarFieldGroup title="Pool Makeup">
     <PoolStatisticPoolMakeUpCell token={firstToken} makeUp={firstMakeUp} />
     <PoolStatisticPoolMakeUpCell token={secondToken} makeUp={secondMakeUp} />
   </PoolStatisticSidebarFieldGroup>

@@ -1,0 +1,41 @@
+.PoolStatisticHeaderSkeleton {
+  display: flex;
+  align-items: center;
+
+  height: 81px;
+}
+
+.PoolStatisticHeaderSkeletonStack {
+  display: flex;
+}
+
+.PoolStatisticHeaderSkeletonFields {
+  flex: 1 1 0;
+  padding: 16px;
+}
+
+.PoolStatisticHeaderSkeletonFields__title,
+.PoolStatisticHeaderSkeletonFields__description {
+  width: 110px;
+}
+
+.PoolStatisticHeaderSkeletonFields__title {
+  height: 20px;
+}
+
+.PoolStatisticHeaderSkeletonFields__description {
+  height: 12px;
+  margin-top: 8px;
+}
+
+.PoolStatisticHeaderSkeletonStack__cover {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+}
+
+.PoolStatisticHeaderSkeletonStack__cover:not(:first-child) {
+  margin-left: -8px;
+  clip-path: url(#tokens_stack_32);
+}

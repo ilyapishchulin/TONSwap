@@ -3,6 +3,14 @@
   align-items: center;
 }
 
+.PageHeaderTonLogo rect {
+  color: var(--accent_color);
+}
+
+.PageHeaderTonLogo path {
+  color: var(--text_primary);
+}
+
 .PageHeaderTonLogo__title {
   margin: 0 0 0 12px;
   color: var(--text_primary);

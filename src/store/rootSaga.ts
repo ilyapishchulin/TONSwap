@@ -14,6 +14,8 @@ import { REQUEST_LIQUIDITY_DEPOSIT } from './sags/requestLiquidityDeposit/reques
 import { requestLiquidityDepositData } from './sags/requestLiquidityDeposit/requestLiquidityDepositData';
 import { REQUEST_ADD_LIQUIDITY_SEND } from './sags/requestAddLiquidity/requestAddLiquiditySend';
 import { requestAddLiquidityData } from './sags/requestAddLiquidity/requestAddLiquidityData';
+import { REQUEST_CURRENT_POOL_SEND } from './sags/requestCurrentPool/requestCurrentPoolSend';
+import { requestCurrentPoolData } from './sags/requestCurrentPool/requestCurrentPoolData';
 
 const EXCHANGE_RATE_DEBOUNCE_TIME = 400;
 const LIQUIDITY_DEBOUNCE_TIME = 400;
@@ -24,6 +26,7 @@ export function* rootSaga(): Generator<ForkEffect> {
   yield takeLatest(REQUEST_CONFIRM_TRANSACTION, requestConfirmTransactionData);
   yield takeLeading(REQUEST_ALL_LIQUIDITIES_SEND, requestAllLiquiditiesData);
   yield takeLatest(REQUEST_ADD_LIQUIDITY_SEND, requestAddLiquidityData);
+  yield takeLatest(REQUEST_CURRENT_POOL_SEND, requestCurrentPoolData);
   yield debounce(LIQUIDITY_DEBOUNCE_TIME, REQUEST_LIQUIDITY_DEPOSIT, requestLiquidityDepositData);
   yield debounce(EXCHANGE_RATE_DEBOUNCE_TIME, REQUEST_EXCHANGE_RATE_SEND, requestExchangeRateData);
 }

@@ -3,6 +3,7 @@ import { TSwapStore } from './swap/TSwapStore';
 import { TUserStore } from './user/TUserStore';
 import { TLiquidityStore } from './liquidity/TLiquidityStore';
 import { TSettingsStore } from './settings/TSettingsStore';
+import { TCurrentPoolStore } from './currentPool/TCurrentPoolStore';
 
 export type TStore = {
   router: TRouterStore,
@@ -10,4 +11,5 @@ export type TStore = {
   user: TUserStore,
   liquidity: TLiquidityStore;
   settings: TSettingsStore;
+  currentPool: TCurrentPoolStore;
 };

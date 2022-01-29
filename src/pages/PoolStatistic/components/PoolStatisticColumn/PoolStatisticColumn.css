@@ -1,4 +1,4 @@
 .PoolStatisticColumn {
   flex: 1 1 0;
-  height: 700px;
+  height: calc(var(--page_min_height) - var(--page_vertical_margin) * 4);
 }

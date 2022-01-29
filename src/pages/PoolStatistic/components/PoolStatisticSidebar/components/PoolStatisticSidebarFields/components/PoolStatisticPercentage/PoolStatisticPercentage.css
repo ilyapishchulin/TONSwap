@@ -9,3 +9,7 @@
 .PoolStatisticPercentage__text--positive {
   color: var(--severity_green);
 }
+
+.PoolStatisticPercentage__text--zero {
+  color: var(--text_primary);
+}

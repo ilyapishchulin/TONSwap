@@ -6,4 +6,5 @@ export enum EAPIMethods {
   ALL_LIQUIDITIES = 'AllLiquidities.php',
   LIQUIDITY = 'Liquidity.php',
   LIQUIDITY_ADD = 'LiquidityAdd.php',
+  POOL_STATISTIC = 'Pool.php',
 }

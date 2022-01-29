@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import './PoolStatisticColumn.css';
 
-import { ReactComponent as GraphMask } from 'icons/masks.svg';
+import { ReactComponent as GraphMask } from 'icons/graphMask.svg';
 
 import { PoolStatisticHeader } from './components/PoolStatisticHeader/PoolStatisticHeader';
 import { PoolStatisticGraph } from './components/PoolStatisticGraph/PoolStatisticGraph';

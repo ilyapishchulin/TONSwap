@@ -1,0 +1,46 @@
+.PoolStatisticSidebarFieldsSkeletons {
+  padding: 4px 0;
+
+  background: var(--island_background);
+  box-shadow: 0 4px 250px rgba(0, 0, 0, .02);
+  border-radius: 20px;
+}
+
+.PoolStatisticSidebarFieldsSkeletons__title {
+  width: 120px;
+  height: 24px;
+}
+
+.PoolStatisticSidebarFieldsSkeletons__description {
+  width: 164px;
+  height: 16px;
+
+  margin-top: 7px;
+}
+
+.PoolStatisticSidebarFieldsSkeletonsPool {
+  display: flex;
+  align-items: center;
+
+  padding: 4px 0;
+}
+
+.PoolStatisticSidebarFieldsSkeletonsPool__circle {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.PoolStatisticSidebarFieldsSkeletonsPool__title {
+  width: 100%;
+  height: 16px;
+
+  margin-right: 8px;
+}
+
+.PoolStatisticSidebarFieldsSkeletonsPool__title:last-child {
+  margin-right: 0;
+}

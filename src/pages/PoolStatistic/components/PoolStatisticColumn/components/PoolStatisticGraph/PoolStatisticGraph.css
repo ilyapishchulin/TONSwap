@@ -26,7 +26,7 @@
 }
 
 .PoolStatisticGraph .recharts-layer path:first-child {
-  fill: url(#colorUv);
+  fill: url(#accent_gradient);
 }
 
 .PoolStatisticGraph .recharts-layer path:nth-child(2) {

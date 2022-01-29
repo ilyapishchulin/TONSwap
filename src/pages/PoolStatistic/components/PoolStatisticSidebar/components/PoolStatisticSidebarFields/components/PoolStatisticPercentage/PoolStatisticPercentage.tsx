@@ -11,6 +11,7 @@ export const PoolStatisticPercentage: FC<TPoolStatisticPercentage> = memo(({ tit
   <PoolStatisticSidebarFieldGroup title={title}>
     <Title className={classNames('PoolStatisticPercentage__text', {
       [`PoolStatisticPercentage__text--${percent > 0 ? 'positive' : 'negative'}`]: true,
-    })} level="3" weight="bold">+104.12%</Title>
+      [`PoolStatisticPercentage__text--zero`]: percent === 0,
+    })} level="3" weight="bold">{percent > 0 ? '+' : ''}{percent}%</Title>
   </PoolStatisticSidebarFieldGroup>
 ));
