@@ -1,7 +1,7 @@
 import { TRouterStore } from './TRouterStore';
-import { EPages } from 'enums/EPages';
+import { getPageByPathAndSetIdInStore } from 'utils/getPageByPathAndSetIdInStore';
 
 export const routerStore: TRouterStore = {
-  activePage: window.location.pathname as EPages,
+  activePage: getPageByPathAndSetIdInStore(window.location.pathname),
   routerParams: {},
 };

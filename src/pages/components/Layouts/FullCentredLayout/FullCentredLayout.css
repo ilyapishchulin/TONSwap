@@ -1,0 +1,6 @@
+.FullCentredLayout {
+  display: flex;
+
+  margin: 18px 100px;
+  min-height: calc(var(--page_min_height) - var(--page_vertical_margin) * 2);
+}

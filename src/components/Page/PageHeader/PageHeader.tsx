@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import './PageHeader.css';
 
-import { TonLogo } from './components/TonLogo/TonLogo';
-import { PageTabs } from './components/PageTabs/PageTabs';
-import { LoginOrAuthorizedButton } from './components/LoginOrAuthorizedButton/LoginOrAuthorizedButton';
+import { PageHeaderTonLogo } from './components/PageHeaderTonLogo/PageHeaderTonLogo';
+import { PageHeaderTabs } from './components/PageHeaderTabs/PageHeaderTabs';
+import { PageHeaderLoginOrAuthorizedButton } from './components/PageHeaderLoginOrAuthorizedButton/PageHeaderLoginOrAuthorizedButton';
 
 export const PageHeader: FC = () => (
   <header className="PageHeader">
-    <TonLogo />
-    <PageTabs />
-    <LoginOrAuthorizedButton />
+    <PageHeaderTonLogo />
+    <PageHeaderTabs />
+    <PageHeaderLoginOrAuthorizedButton />
   </header>
 );

@@ -1,0 +1,39 @@
+.PoolStatisticGraph .recharts-cartesian-grid-horizontal line,
+.PoolStatisticGraph .recharts-cartesian-grid-vertical line {
+  stroke: var(--stroke_separator);
+}
+
+.PoolStatisticGraph .recharts-cartesian-grid-vertical line:first-child,
+.PoolStatisticGraph .recharts-cartesian-grid-vertical line:last-child,
+.PoolStatisticGraph .recharts-cartesian-grid-horizontal line:first-child,
+.PoolStatisticGraph .recharts-cartesian-grid-horizontal line:last-child {
+  display: none;
+}
+
+.PoolStatisticGraph .recharts-layer.recharts-line circle,
+.PoolStatisticGraph .recharts-cartesian-axis line {
+  display: none;
+}
+
+.PoolStatisticGraph text,
+.PoolStatisticGraph tspan {
+  font-family: var(--FFMulish);
+  font-weight: 500;
+  font-size: 13px;
+
+  fill: var(--text_quartenary);
+  color: var(--text_quartenary);
+}
+
+.PoolStatisticGraph .recharts-layer path:first-child {
+  fill: url(#colorUv);
+}
+
+.PoolStatisticGraph .recharts-layer path:nth-child(2) {
+  stroke: var(--accent_color);
+  stroke-width: 2px;
+}
+
+.PoolStatisticGraph .yAxis .recharts-cartesian-axis-ticks .recharts-layer:first-child {
+  display: none;
+}

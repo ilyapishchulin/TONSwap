@@ -1,0 +1,16 @@
+.PoolStatisticSidebarFiledVolume__title {
+  margin: 0;
+  color: var(--text_primary);
+}
+
+.PoolStatisticSidebarFiledVolume__percents {
+  margin: 4px 0 0 0;
+}
+
+.PoolStatisticSidebarFiledVolume__percents--positive {
+  color: var(--severity_green);
+}
+
+.PoolStatisticSidebarFiledVolume__percents--negative {
+  color: var(--severity_orange);
+}

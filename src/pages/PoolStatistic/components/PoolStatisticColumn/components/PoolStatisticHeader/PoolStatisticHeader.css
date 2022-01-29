@@ -1,0 +1,33 @@
+.PoolStatisticHeader {
+  display: flex;
+  align-items: center;
+}
+
+.PoolStatisticHeader__icon {
+  cursor: pointer;
+
+  padding: 6px;
+  margin-right: 16px;
+
+  color: var(--icon_secondary);
+}
+
+.PoolStatisticHeader__icon:hover {
+  color: var(--icon_primary);
+}
+
+.PoolStatisticHeaderFields {
+  flex: 1 1 0;
+  padding: 16px;
+}
+
+.PoolStatisticHeaderFields__volume {
+  margin: 0;
+  color: var(--text_primary);
+}
+
+.PoolStatisticHeaderFields__tickers {
+  text-transform: uppercase;
+  margin: 4px 0 0 0;
+  color: var(--text_tertiary);
+}

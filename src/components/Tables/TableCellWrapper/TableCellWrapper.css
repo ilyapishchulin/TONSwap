@@ -1,19 +1,14 @@
-/*.TableCellWrapper td,*/
-/*.TableCellWrapper th {*/
-/*  min-width: 80px;*/
-/*}*/
-
 .TableCellWrapper th:first-child,
 .TableCellWrapper td:first-child {
   text-align: left;
   width: 100%;
 }
 
-.TableCellWrapper:hover td:not(.TableCell--disableDefault):first-child {
+.TableCellWrapper:hover td:not(.TableCell--disableDefault):not(:nth-child(2)):first-child {
   border-radius: 16px 0 0 16px;
 }
 
-.TableCellWrapper:hover td:not(.TableCell--disableDefault):last-child {
+.TableCellWrapper:hover td:not(.TableCell--disableDefault):not(:nth-child(2)):last-child {
   border-radius: 0 16px 16px 0;
 }
 

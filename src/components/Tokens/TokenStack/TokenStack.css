@@ -1,0 +1,28 @@
+.TokenStack--big {
+  --token_stack_width: 32px;
+  --token_stack_height: 32px;
+  --token_stack_margin-left: -8px;
+  --token_stack_mask: url(#tokens_stack_32);
+}
+
+.TokenStack--large {
+  --token_stack_width: 28px;
+  --token_stack_height: 28px;
+  --token_stack_margin-left: -6px;
+  --token_stack_mask: url(#tokens_stack_28);
+}
+
+.TokenStack {
+  display: flex;
+}
+
+.TokenStack__cover {
+  width: var(--token_stack_width);
+  height: var(--token_stack_height);
+  border-radius: 50%;
+}
+
+.TokenStack__cover:not(:first-child) {
+  margin-left: var(--token_stack_margin-left);
+  clip-path: var(--token_stack_mask);
+}

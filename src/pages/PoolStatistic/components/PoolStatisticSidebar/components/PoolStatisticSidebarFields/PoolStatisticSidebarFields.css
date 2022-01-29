@@ -1,0 +1,7 @@
+.PoolStatisticSidebarFields {
+  padding: 4px 0;
+
+  background: var(--island_background);
+  box-shadow: 0 4px 250px rgba(0, 0, 0, .02);
+  border-radius: 20px;
+}

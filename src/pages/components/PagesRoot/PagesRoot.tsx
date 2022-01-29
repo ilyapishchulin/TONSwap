@@ -7,6 +7,7 @@ import { selectActivePage } from 'store/router/selectors/selectActivePage';
 import { SwapTokens } from 'pages/SwapTokens/SwapTokens';
 import { PoolsPage } from 'pages/PoolsPage/PoolsPage';
 import { CreateLiquidity } from 'pages/CreateLiquidity/CreateLiquidity';
+import { PoolStatistic } from '../../PoolStatistic/PoolStatistic';
 
 export const PagesRoot = () => {
   const activePage = useSelector(selectActivePage);
@@ -24,6 +25,10 @@ export const PagesRoot = () => {
 
     case EPages.CREATE_LIQUIDITY:
       PageComponent = CreateLiquidity;
+      break;
+
+    case EPages.POOL_STATISTIC:
+      PageComponent = PoolStatistic;
       break;
   }
 

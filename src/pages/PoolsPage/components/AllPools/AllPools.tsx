@@ -1,6 +1,9 @@
 import { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { EPages } from 'enums/EPages';
+import { router } from 'utils/router';
+
 import { requestAllLiquiditiesSend } from 'store/sags/requestAllLiquidities/requestAllLiquiditiesSend';
 import { selectAllLiquidities } from 'store/liquidity/selectors/selectAllLiquidities';
 
@@ -13,7 +16,6 @@ import { Subhead } from 'components/Typography/Subhead/Subhead';
 
 import { PoolCell } from '../PoolCell/PoolCell';
 import { PoolsSkeletons } from '../PoolsSkeletons/PoolsSkeletons';
-
 
 export const AllPools: FC = () => {
   const dispatch = useDispatch();
@@ -47,7 +49,13 @@ export const AllPools: FC = () => {
           <Subhead weight="semibold">APY</Subhead>
         </TableHeader>
       </TableCellWrapper>
-      {allLiquidities.map((liquidity) => <PoolCell key={liquidity.id} {...liquidity} />)}
+      {allLiquidities.map((liquidity) => (
+        <PoolCell
+          key={liquidity.id}
+          onClick={() => router.openPage(EPages.POOL_STATISTIC, { id: liquidity.id })}
+          {...liquidity}
+        />
+      ))}
     </Table>
   );
 }

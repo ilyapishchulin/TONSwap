@@ -14,27 +14,6 @@
   color: var(--text_primary);
 }
 
-.PoolCellToken__cover,
-.PoolCellToken__emptyCover {
-  width: 28px;
-  height: 28px;
-
-  border-radius: 50%;
-}
-
-.PoolCellToken__cover:first-child {
-  z-index: 2;
-}
-
-.PoolCellToken__emptyCover {
-  background: var(--island_background);
-}
-
-.PoolCellToken__cover:not(:first-child) {
-  margin-left: -6px;
-  clip-path: url(#tokens_stack_28);
-}
-
 .PoolCellToken__text {
   margin-left: 20px;
 }

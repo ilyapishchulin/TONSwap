@@ -18,7 +18,7 @@ body {
     --tertiary_background: #F8F8F8;
     --quartenary_background: #FCFCFC;
 
-    --icon_primary: #CECECE;
+    --icon_primary: #6C6C6C;
     --icon_secondary: #CECECE;
 
     --island_background: #FFFFFF;
@@ -30,7 +30,7 @@ body {
     --stroke_tertiary: #F0F0F0;
     --stroke_separator: #F0F0F0;
 
-    --separator_main: #6C6C6C;
+    --separator_main: #F0F0F0;
 
     --segmented_control_text: #0088CC;
     --segmented_control_background: #FCFCFC;

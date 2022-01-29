@@ -1,0 +1,9 @@
+.PageHeaderTonLogo {
+  display: flex;
+  align-items: center;
+}
+
+.PageHeaderTonLogo__title {
+  margin: 0 0 0 12px;
+  color: var(--text_primary);
+}

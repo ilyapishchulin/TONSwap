@@ -4,8 +4,8 @@ import './TableCellWrapper.css';
 
 import { classNames } from 'utils/classNames';
 
-export const TableCellWrapper: FC<TTableCellWrapper> = ({ className, children }) => (
-  <tr className={classNames('TableCellWrapper', className)}>
+export const TableCellWrapper: FC<TTableCellWrapper> = ({ onClick, className, children }) => (
+  <tr onClick={onClick} className={classNames('TableCellWrapper', className)}>
     {children}
   </tr>
 );

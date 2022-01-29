@@ -8,6 +8,7 @@ import { setActiveModal } from 'store/router/sets/activeModal/setActiveModal';
 import { clearActiveModal } from 'store/router/sets/activeModal/clearActiveModal';
 import { setActivePage } from 'store/router/sets/activePage/setActivePage';
 import { setRouterParams } from 'store/router/sets/setRouterParams';
+import { getPageByPathAndSetIdInStore } from './getPageByPathAndSetIdInStore';
 
 const { dispatch } = store;
 
@@ -17,7 +18,8 @@ class routerUtils {
   }
 
   onPopstate(e: PopStateEvent) {
-    dispatch(setActivePage(e.state?.page || EPages.HOME));
+    const { page } = e.state;
+    dispatch(setActivePage(page ? getPageByPathAndSetIdInStore(e.state?.page) : EPages.HOME));
   }
 
   closeModal() {
@@ -29,11 +31,14 @@ class routerUtils {
   }
 
   openPage(page: EPages, routerParams: TRouterParams = {}) {
-    window.history.pushState({
-      page,
-    }, '', page);
     dispatch(setActivePage(page));
     dispatch(setRouterParams(routerParams));
+
+    if (page.includes(':id')) {
+      page = page.replace(':id', routerParams.id) as EPages;
+    }
+
+    window.history.pushState({ page }, '', page);
   }
 
   openModal(modal: EModals, routerParams: TRouterParams = {}) {

@@ -1,0 +1,21 @@
+.PoolStatisticGraphCursor {
+  padding: 12px;
+
+  background: var(--island_background);
+  border: 1px solid var(--stroke_tertiary);
+  border-radius: 12px;
+}
+
+.PoolStatisticGraphCursor__title,
+.PoolStatisticGraphCursor__description {
+  display: block;
+}
+
+.PoolStatisticGraphCursor__title {
+  color: var(--text_primary);
+}
+
+.PoolStatisticGraphCursor__description {
+  margin-top: 4px;
+  color: var(--text_tertiary);
+}

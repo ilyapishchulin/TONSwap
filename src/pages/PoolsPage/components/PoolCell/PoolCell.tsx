@@ -8,23 +8,13 @@ import { classNames } from 'utils/classNames';
 import { TableCellWrapper } from 'components/Tables/TableCellWrapper/TableCellWrapper';
 import { TableCell } from 'components/Tables/TableCell/TableCell';
 import { Text } from 'components/Typography/Text/Text';
+import { TokenStack } from 'components/Tokens/TokenStack/TokenStack';
 
-export const PoolCell: FC<TPoolCell> = memo(({ liquidityFrom, liquidityTo, APY, volume, size }) => (
-  <TableCellWrapper className="PoolCell">
+export const PoolCell: FC<TPoolCell> = memo(({ onClick, liquidityFrom, liquidityTo, APY, volume, size }) => (
+  <TableCellWrapper onClick={onClick} className="PoolCell">
     <TableCell removeSeparator>
       <div className="PoolCellToken">
-        <img
-          className="PoolCellToken__cover"
-          alt="Token cover"
-          src={liquidityFrom.images[ETokenImages.LARGE]}
-          srcSet={`${liquidityFrom.images[ETokenImages.LARGE_RETINA]}, ${liquidityFrom.images[ETokenImages.LARGE_RETINA]} 2x`}
-        />
-        <img
-          className="PoolCellToken__cover"
-          alt="Token cover"
-          src={liquidityTo.images[ETokenImages.LARGE]}
-          srcSet={`${liquidityTo.images[ETokenImages.LARGE_RETINA]}, ${liquidityTo.images[ETokenImages.LARGE_RETINA]} 2x`}
-        />
+        <TokenStack firstToken={liquidityFrom} secondToken={liquidityTo} size={ETokenImages.LARGE} />
         <Text className="PoolCellToken__text" weight="bold">{liquidityFrom.ticker} + {liquidityTo.ticker}</Text>
       </div>
     </TableCell>

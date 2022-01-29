@@ -1,0 +1,11 @@
+.PoolStatisticPercentage__text {
+  margin: 0;
+}
+
+.PoolStatisticPercentage__text--negative {
+  color: var(--severity_orange);
+}
+
+.PoolStatisticPercentage__text--positive {
+  color: var(--severity_green);
+}
