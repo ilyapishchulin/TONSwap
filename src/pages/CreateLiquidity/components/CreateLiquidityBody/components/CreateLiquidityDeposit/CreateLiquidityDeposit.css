@@ -1,0 +1,17 @@
+.CreateLiquidityDeposit {
+  margin-top: 28px;
+
+  display: flex;
+}
+
+.CreateLiquidityDeposit__text {
+  display: flex;
+  align-items: center;
+
+  width: 80%;
+  color: var(--text_primary);
+}
+
+.CreateLiquidityDepositPair input {
+  max-width: 124px;
+}

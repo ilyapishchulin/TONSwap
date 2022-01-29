@@ -1,0 +1,18 @@
+.CreateLiquidityFeeTierItem {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 12px;
+
+  margin: 0 2px;
+
+  color: var(--text_secondary);
+}
+
+.CreateLiquidityFeeTierItem:not(.CreateLiquidityFeeTierItem--active):hover {
+  background: var(--primary_background);
+}
+
+.CreateLiquidityFeeTierItem--active {
+  color: var(--segmented_control_text);
+  background: var(--segmented_control_background);
+}

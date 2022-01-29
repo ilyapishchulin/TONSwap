@@ -5,6 +5,4 @@ export type TSwapStore = {
   tokens: TToken[],
   exchangeFrom: TExchangeData;
   exchangeTo: TExchangeData;
-  slippageTolerance: string;
-  durationLimit: string,
 };

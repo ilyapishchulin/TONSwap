@@ -17,7 +17,7 @@ export const ModalRoot: FC<TModalRoot> = () => {
 
   let ModalComponent = null;
   switch (activeModal) {
-    case EModals.SWAP_SETTINGS:
+    case EModals.SETTINGS:
       ModalComponent = SettingsModal;
       break;
 

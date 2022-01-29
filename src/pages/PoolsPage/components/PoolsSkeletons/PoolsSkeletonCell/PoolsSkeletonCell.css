@@ -1,0 +1,67 @@
+.PoolsSkeletonCell {
+  max-width: 100%;
+  height: 32px;
+  width: auto;
+
+  display: flex;
+  align-items: center;
+
+  list-style-type: none;
+  padding: 12px;
+}
+
+.PoolsSkeletonCell:nth-last-child(-n+3) {
+  opacity: .5;
+}
+
+.PoolsSkeletonCell:nth-last-child(-n+2) {
+  opacity: .25;
+}
+
+.PoolsSkeletonCell:last-child {
+  opacity: .2;
+}
+
+.PoolsSkeletonCell__image {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+}
+
+.PoolsSkeletonCell__image:not(:first-child) {
+  margin-left: -6px;
+  clip-path: url(#tokens_stack_28);
+}
+
+.PoolsSkeletonCellTitleWrapper {
+  flex: 1 1 0;
+}
+
+.PoolsSkeletonCellTitle {
+  width: 111px;
+  height: 12px;
+
+  margin-left: 20px;
+}
+
+.PoolsSkeletonCell__column {
+  width: 31px;
+  height: 16px;
+}
+
+.PoolsSkeletonCell__column:nth-child(2) {
+  width: 66px;
+}
+
+.PoolsSkeletonCell__column:last-child {
+  width: 58px;
+}
+
+
+.PoolsSkeletonCell__separator {
+  width: 2px;
+  height: 12px;
+
+  margin: 0 12px;
+}

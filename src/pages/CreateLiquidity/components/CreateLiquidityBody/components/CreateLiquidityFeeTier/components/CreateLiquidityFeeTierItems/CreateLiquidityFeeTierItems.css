@@ -1,0 +1,9 @@
+.CreateLiquidityFeeTierItems {
+  display: flex;
+  padding: 4px;
+
+  background: var(--tertiary_background);
+  border: 1px solid var(--stroke_tertiary);
+  box-sizing: border-box;
+  border-radius: 16px;
+}

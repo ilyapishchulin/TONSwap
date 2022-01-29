@@ -1,0 +1,26 @@
+.TokensPair {
+  position: relative;
+}
+
+.TokensPair__icon {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 40px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border: 1px solid var(--stroke_tertiary);
+  border-radius: 50%;
+
+  color: var(--accent_color);
+  background: var(--island_background);
+  box-shadow: 0 4px 36px rgba(0, 0, 0, .09);
+}

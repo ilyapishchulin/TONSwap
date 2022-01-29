@@ -1,0 +1,16 @@
+.PoolsSkeletons {
+  padding: 4px;
+
+  background: var(--island_background);
+  box-shadow: 0 4px 250px rgba(0, 0, 0, .02);
+  border-radius: 20px;
+}
+
+.PoolsSkeletonsTitle {
+  width: 115px;
+  height: 20px;
+
+  margin: 32px 0 12px 0;
+  background: var(--skeleton_bone);
+  border-radius: 4px;
+}

@@ -10,9 +10,11 @@ import { setExchangeCountTo } from 'store/swap/sets/setExchangeCountTo';
 import { setExchangeCountFrom } from 'store/swap/sets/setExchangeCountFrom';
 import { requestExchangeRateSend } from 'store/sags/requestExchangeRate/requestExchangeRateSend';
 import { selectIsAuthorized } from 'store/user/selectors/selectIsAuthorized';
+import { selectBalance } from 'store/user/selectors/selectBalance';
+import { setExchangeFromToken } from 'store/swap/sets/setExchangeFromToken';
+import { setExchangeToToken } from 'store/swap/sets/setExchangeToToken';
 
 import { TokenInput } from './components/TokenInput/TokenInput';
-import { selectBalance } from '../../../../store/user/selectors/selectBalance';
 
 export const SwapTokensInputs: FC = () => {
   const dispatch = useDispatch();
@@ -24,7 +26,10 @@ export const SwapTokensInputs: FC = () => {
 
   const onSelectToken = (e: MouseEvent<HTMLDivElement>, isExchangeFrom: boolean) => {
     e.preventDefault();
-    router.openModal(EModals.SELECT_TOKEN, { isExchangeFrom });
+    router.openModal(EModals.SELECT_TOKEN, {
+      callbackFunction: isExchangeFrom ? setExchangeFromToken : setExchangeToToken,
+      requestFunction: requestExchangeRateSend,
+    });
   };
 
   const onExchangeCountChange = (exchangeCount: string, isExchangeFrom: boolean) => {

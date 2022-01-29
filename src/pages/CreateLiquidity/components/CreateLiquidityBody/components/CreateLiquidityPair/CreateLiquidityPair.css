@@ -1,0 +1,25 @@
+.CreateLiquidityPair {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 32px 24px;
+
+  background: var(--tertiary_background);
+  border: 1px solid var(--stroke_tertiary);
+  border-radius: 16px;
+}
+
+.CreateLiquidityPairInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: var(--text_tertiary);
+}
+
+.CreateLiquidityPairInfo__text {
+  display: block;
+  margin-top: 4px;
+}

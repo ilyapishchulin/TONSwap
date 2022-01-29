@@ -3,4 +3,7 @@ export enum EAPIMethods {
   REQUEST_COURSE = 'RequestCourse.php',
   LOGIN = 'Login.php',
   CONFIRM_TRANSACTION = 'ConfirmTransaction.php',
+  ALL_LIQUIDITIES = 'AllLiquidities.php',
+  LIQUIDITY = 'Liquidity.php',
+  LIQUIDITY_ADD = 'LiquidityAdd.php',
 }

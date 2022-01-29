@@ -5,10 +5,10 @@
   padding: 16px;
   margin-top: 12px;
 
-  border: 1px solid #F0F0F0;
+  border: 1px solid var(--stroke_tertiary);
   border-radius: 20px;
 
-  background: var(--quaternary_background);
+  background: var(--quartenary_background);
   box-sizing: border-box;
 }
 

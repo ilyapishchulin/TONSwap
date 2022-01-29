@@ -1,0 +1,9 @@
+.Table {
+  width: 100%;
+  border-spacing: 0;
+  word-break: break-all;
+}
+
+.Table:not(:first-child) {
+  margin-top: 32px;
+}

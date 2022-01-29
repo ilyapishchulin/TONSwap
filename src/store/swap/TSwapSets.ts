@@ -5,8 +5,6 @@ import { setExchangeFrom } from './sets/setExchangeFrom';
 import { setExchangeTo } from './sets/setExchangeTo';
 import { setExchangeCountFrom } from './sets/setExchangeCountFrom';
 import { setExchangeCountTo } from './sets/setExchangeCountTo';
-import { setDurationLimit } from './sets/setDurationLimit';
-import { setSlippageTolerance } from './sets/setSlippageTolerance';
 
 export type TSwapSets = ReturnType<
   | typeof setTokens
@@ -16,6 +14,4 @@ export type TSwapSets = ReturnType<
   | typeof setExchangeTo
   | typeof setExchangeCountFrom
   | typeof setExchangeCountTo
-  | typeof setDurationLimit
-  | typeof setSlippageTolerance
 >;

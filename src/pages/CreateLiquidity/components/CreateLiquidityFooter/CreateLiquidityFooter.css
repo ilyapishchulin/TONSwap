@@ -1,0 +1,60 @@
+.CreateLiquidityFooter {
+  display: flex;
+  margin: 36px 0 20px 0;
+}
+
+.CreateLiquidityFooterSettings,
+.CreateLiquidityFooterButton {
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  margin: 0;
+}
+
+.CreateLiquidityFooterSettings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 12px;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+  background: var(--tertiary_background);
+}
+
+.CreateLiquidityFooterSettings:hover {
+  background: var(--stroke_tertiary);
+}
+
+.CreateLiquidityFooterSettings__icon {
+  color: var(--text_secondary);
+}
+
+.CreateLiquidityFooterButton {
+  flex: 1 1 0;
+  padding: 16px;
+
+  border: none;
+  outline: none;
+
+  color: var(--accent_color);
+  background: var(--accent_background);
+  border-radius: 16px;
+}
+
+.CreateLiquidityFooterButton[disabled] {
+  cursor: auto;
+  opacity: .5;
+}
+
+.CreateLiquidityFooterButton:not([disabled]):hover {
+  background: var(--accent_background_hover);
+}
+
+.CreateLiquidityFooterButton:not([disabled]):active {
+  background: var(--accent_background_click);
+}

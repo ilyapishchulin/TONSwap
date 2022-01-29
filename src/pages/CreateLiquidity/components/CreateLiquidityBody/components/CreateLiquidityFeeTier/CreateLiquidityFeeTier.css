@@ -1,0 +1,13 @@
+.CreateLiquidityFeeTier {
+  display: flex;
+  align-items: center;
+
+  margin-top: 28px;
+}
+
+.CreateLiquidityFeeTier__text {
+  flex: 1 1 0;
+
+  margin: 0;
+  color: var(--text_primary);
+}

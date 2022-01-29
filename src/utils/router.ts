@@ -24,6 +24,10 @@ class routerUtils {
     dispatch(clearActiveModal());
   }
 
+  closePage() {
+    window.history.back();
+  }
+
   openPage(page: EPages, routerParams: TRouterParams = {}) {
     window.history.pushState({
       page,

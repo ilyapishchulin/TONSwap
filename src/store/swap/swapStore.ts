@@ -11,6 +11,4 @@ export const swapStore: TSwapStore = {
   tokens: [],
   exchangeTo: defaultExchangeData,
   exchangeFrom: defaultExchangeData,
-  slippageTolerance: '0.05',
-  durationLimit: '30',
 };

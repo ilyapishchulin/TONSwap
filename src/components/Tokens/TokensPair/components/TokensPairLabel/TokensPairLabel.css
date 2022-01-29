@@ -1,0 +1,38 @@
+.TokensPairLabel {
+  display: flex;
+  justify-content: space-between;
+
+  border-radius: 16px;
+  background: var(--tertiary_background);
+  border: 1px solid var(--stroke_tertiary);
+}
+
+.TokensPairLabel:not(:first-child) {
+  margin-top: 12px;
+}
+
+.TokensPairLabelInput {
+  width: auto;
+  padding: 12px 16px;
+
+  outline: none;
+  border: none;
+  background: none;
+  margin: 0;
+
+  font-family: var(--FFMulish);
+  font-weight: 600;
+  font-size: 17px;
+
+  box-sizing: border-box;
+  color: var(--text_primary);
+}
+
+.TokensPairLabelInput::placeholder {
+  color: var(--text_tertiary);
+}
+
+.TokensPairLabelSelectToken {
+  cursor: default;
+  margin: 6px;
+}

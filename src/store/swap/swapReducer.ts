@@ -16,10 +16,6 @@ import { EXCHANGE_COUNT_TO_SET } from './sets/setExchangeCountTo';
 import { actionSetExchangeCountTo } from './actions/actionSetExchangeCountTo';
 import { EXCHANGE_COUNT_FROM_SET } from './sets/setExchangeCountFrom';
 import { actionSetExchangeCountFrom } from './actions/actionSetExchangeCountFrom';
-import { DURATION_LIMIT_SET } from './sets/setDurationLimit';
-import { actionSetDurationLimit } from './actions/actionSetDurationLimit';
-import { SLIPPAGE_TOLERANCE_SET } from './sets/setSlippageTolerance';
-import { actionSetSlippageTolerance } from './actions/actionSetSlippageTolerance';
 
 export const swapReducer = (
   state = swapStore,
@@ -46,12 +42,6 @@ export const swapReducer = (
 
     case EXCHANGE_COUNT_TO_SET:
       return actionSetExchangeCountTo(state, action.data);
-
-    case DURATION_LIMIT_SET:
-      return actionSetDurationLimit(state, action.data);
-
-    case SLIPPAGE_TOLERANCE_SET:
-      return actionSetSlippageTolerance(state, action.data);
 
     default:
       return state;

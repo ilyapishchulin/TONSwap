@@ -55,7 +55,7 @@ export const SwapTokensFooter: FC = () => {
   return (
     <footer className="SwapTokensFooter">
       <SwapTokensIconButton onClick={swapTokensPosition} Icon={Icon28ReverseOutline} />
-      <SwapTokensIconButton onClick={() => router.openModal(EModals.SWAP_SETTINGS)} Icon={Icon28SettingsOutline} />
+      <SwapTokensIconButton onClick={() => router.openModal(EModals.SETTINGS)} Icon={Icon28SettingsOutline} />
       <SwapTokensButton
         onClick={openConfirmationModal}
         name={getButtonName()}

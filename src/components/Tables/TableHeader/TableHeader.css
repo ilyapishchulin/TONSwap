@@ -1,0 +1,22 @@
+.TableHeader:first-child {
+  text-align: left;
+  color: var(--text_primary);
+}
+
+.TableHeader {
+  min-width: 64px;
+  text-align: right;
+  color: var(--text_tertiary);
+}
+
+.TableHeader * {
+  margin: 0 0 12px 0;
+}
+
+.TableHeader:not(:first-child) * {
+  margin-right: 12px;
+}
+
+.TableHeader:last-child {
+  padding-right: 12px;
+}

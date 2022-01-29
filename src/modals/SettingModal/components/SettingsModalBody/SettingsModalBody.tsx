@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { router } from 'utils/router';
 
-import { selectSlippageTolerance } from 'store/swap/selectors/selectSlippageTolerance';
-import { selectDurationLimit } from 'store/swap/selectors/selectDurationLimit';
-import { setSlippageTolerance } from 'store/swap/sets/setSlippageTolerance';
-import { setDurationLimit } from 'store/swap/sets/setDurationLimit';
+import { selectSlippageTolerance } from 'store/settings/selectors/selectSlippageTolerance';
+import { selectDurationLimit } from 'store/settings/selectors/selectDurationLimit';
+import { setSlippageTolerance } from 'store/settings/sets/setSlippageTolerance';
+import { setDurationLimit } from 'store/settings/sets/setDurationLimit';
 
 import { SettingsFormItem } from './components/SettingsFormItem/SettingsFormItem';
 import { SettingsFormSaveButton } from './components/SettingsFormSaveButton/SettingsFormSaveButton';

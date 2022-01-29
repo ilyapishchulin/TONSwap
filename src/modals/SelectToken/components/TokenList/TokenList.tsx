@@ -7,10 +7,8 @@ import { router } from 'utils/router';
 import { ETokenImages } from 'enums/ETokenImages';
 
 import { selectTokens } from 'store/swap/selectors/selectTokens';
-import { setExchangeFromToken } from 'store/swap/sets/setExchangeFromToken';
-import { setExchangeToToken } from 'store/swap/sets/setExchangeToToken';
-import { selectIsExchangeFrom } from 'store/router/selectors/routerParams/selectIsExchangeFrom';
-import { requestExchangeRateSend } from 'store/sags/requestExchangeRate/requestExchangeRateSend';
+import { selectCallbackFunction } from 'store/router/selectors/routerParams/selectCallbackFunction';
+import { selectRequestFunction } from 'store/router/selectors/routerParams/selectRequestFunction';
 
 import { TokenCell } from './components/TokenCell/TokenCell';
 
@@ -18,16 +16,12 @@ export const TokenList: FC = () => {
   const dispatch = useDispatch();
 
   const tokens = useSelector(selectTokens);
-  const isFromSelectedToken = useSelector(selectIsExchangeFrom);
+  const callbackFunction = useSelector(selectCallbackFunction);
+  const requestFunction = useSelector(selectRequestFunction);
 
   const selectToken = (token: TToken) => {
-    if (isFromSelectedToken) {
-      dispatch(setExchangeFromToken(token));
-    } else {
-      dispatch(setExchangeToToken(token));
-    }
-
-    dispatch(requestExchangeRateSend());
+    dispatch(callbackFunction(token));
+    dispatch(requestFunction());
     router.closeModal();
   }
 

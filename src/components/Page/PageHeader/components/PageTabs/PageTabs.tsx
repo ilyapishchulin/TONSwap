@@ -14,7 +14,7 @@ export const PageTabs: FC = () => {
   return (
     <div className="PageTabs">
       <PageTab onClick={() => router.openPage(EPages.SWAP)} isActive={[EPages.HOME, EPages.SWAP].includes(activePage)} text="Swap" />
-      <PageTab onClick={() => router.openPage(EPages.POOLS)} isActive={activePage === EPages.POOLS} text="Pools" />
+      <PageTab onClick={() => router.openPage(EPages.POOLS)} isActive={[EPages.POOLS, EPages.CREATE_LIQUIDITY].includes(activePage)} text="Pools" />
     </div>
   );
 }

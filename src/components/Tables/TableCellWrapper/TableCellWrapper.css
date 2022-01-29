@@ -1,0 +1,58 @@
+/*.TableCellWrapper td,*/
+/*.TableCellWrapper th {*/
+/*  min-width: 80px;*/
+/*}*/
+
+.TableCellWrapper th:first-child,
+.TableCellWrapper td:first-child {
+  text-align: left;
+  width: 100%;
+}
+
+.TableCellWrapper:hover td:not(.TableCell--disableDefault):first-child {
+  border-radius: 16px 0 0 16px;
+}
+
+.TableCellWrapper:hover td:not(.TableCell--disableDefault):last-child {
+  border-radius: 0 16px 16px 0;
+}
+
+.TableCellWrapper:nth-child(2) td:not(.TableCell--disableDefault) {
+  border-top: 4px solid var(--island_background)
+}
+
+.TableCellWrapper:last-child td:not(.TableCell--disableDefault) {
+  border-bottom: 4px solid var(--island_background)
+}
+
+.TableCellWrapper td:not(.TableCell--disableDefault):first-child {
+  border-left: 4px solid var(--island_background)
+}
+
+.TableCellWrapper td:not(.TableCell--disableDefault):last-child {
+  border-right: 4px solid var(--island_background)
+}
+
+.TableCellWrapper:hover .TableCell:not(.TableCell--disableDefault) {
+  background: var(--tertiary_background);
+}
+
+.TableCellWrapper:active .TableCell:not(.TableCell--disableDefault) {
+  background: var(--primary_background);
+}
+
+.TableCellWrapper:nth-child(2) .TableCell:not(.TableCell--disableDefault):first-child {
+  border-top-left-radius: 16px;
+}
+
+.TableCellWrapper:nth-child(2) .TableCell:not(.TableCell--disableDefault):last-child {
+  border-top-right-radius: 16px;
+}
+
+.TableCellWrapper:last-child .TableCell:not(.TableCell--disableDefault):first-child {
+  border-bottom-left-radius: 16px;
+}
+
+.TableCellWrapper:last-child .TableCell:not(.TableCell--disableDefault):last-child {
+  border-bottom-right-radius: 16px;
+}

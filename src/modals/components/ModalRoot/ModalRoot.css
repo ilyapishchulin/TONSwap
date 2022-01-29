@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: center;
 
+  animation: openModal 100ms;
   background: rgba(0, 0, 0, .25);
 }
 
@@ -29,4 +30,14 @@
 #SelectToken {
   max-width: 368px;
   max-height: 552px;
+}
+
+@keyframes openModal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

@@ -1,9 +1,9 @@
 .MiddleLayoutWrapper {
-  min-height: calc(var(--page_min_height) - var(--page_vertical_margin) * 2);
-
   display: flex;
   align-items: center;
   justify-content: center;
+
+  min-height: calc(var(--page_min_height) - var(--page_vertical_margin) * 2);
 }
 
 .MiddleLayout {

@@ -24,7 +24,7 @@
   justify-content: center;
 
   color: var(--accent_color);
-  background: var(--island_background);
+  background: var(--primary_background);
 }
 
 .AuthorizedButton__balance {

@@ -3,9 +3,8 @@ import { TTokenInput } from './TTokenInput';
 import './TokenInput.css';
 
 import { classNames } from 'utils/classNames';
-import { ETokenImages } from 'enums/ETokenImages';
 
-import { SelectToken } from './components/SelectToken/SelectToken';
+import { SelectToken } from 'components/Tokens/SelectToken/SelectToken';
 import { CountingFields } from './components/CountingFields/CountingFields';
 
 const TOKEN_INPUT_REGEX = '^[0-9.]*$';
@@ -48,10 +47,8 @@ export const TokenInput: FC<TTokenInput> = memo(({
           onChange={validateInputValueAndSave}
         />
         <SelectToken
+          token={token}
           onSelectedToken={onSelectedToken}
-          ticker={token?.ticker}
-          imageSrc={token?.images[ETokenImages.SMALL]}
-          imageSrcSet={`${token?.images[ETokenImages.SMALL]}, ${token?.images[ETokenImages.SMALL_RETINA]} 2x`}
         />
       </div>
       <CountingFields

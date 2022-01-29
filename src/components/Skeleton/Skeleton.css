@@ -1,0 +1,24 @@
+.Skeleton {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 8px;
+  color: var(--skeleton_bone);
+  background: var(--skeleton_bone);
+
+  animation: skeleton_animation 1.5s infinite linear;
+}
+
+@keyframes skeleton_animation {
+  0% {
+    opacity: .6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .6;
+  }
+}

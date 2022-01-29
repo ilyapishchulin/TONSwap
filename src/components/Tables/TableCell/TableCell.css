@@ -1,0 +1,31 @@
+.TableCell {
+  position: relative;
+  min-width: 76px;
+
+  text-align: right;
+  box-sizing: border-box;
+
+  color: var(--text_primary);
+}
+
+.TableCell:not(.TableCell--removeSeparator) span {
+  display: block;
+  margin-right: 12px;
+}
+
+.TableCell:not(.TableCell--disableDefault):first-child {
+  padding: 12px;
+}
+
+.TableCell__separator {
+  position: absolute;
+  top: 20px;
+  right: 0;
+
+  width: 2px;
+  height: 12px;
+
+  margin-left: 12px;
+  border-radius: 1px;
+  background: var(--stroke_tertiary);
+}
