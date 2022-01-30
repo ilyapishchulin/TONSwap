@@ -7,10 +7,16 @@ body {
 
 .PageLayout {
   --page_vertical_margin: 44px;
-  --page_min_height: calc(100vh - var(--page_vertical_margin) * 2 - env(--safe-area-inset-bottom, 0px) - env(--safe-area-inset-top, 0px));
+  --page_min_height: calc(100vh - var(--page_vertical_margin) * 2);
 
   position: relative;
   min-height: var(--page_min_height);
   max-width: 1440px;
   margin: var(--page_vertical_margin) auto;
+}
+
+@media (max-width: 600px) {
+  .PageLayout {
+    --page_vertical_margin: 24px;
+  }
 }

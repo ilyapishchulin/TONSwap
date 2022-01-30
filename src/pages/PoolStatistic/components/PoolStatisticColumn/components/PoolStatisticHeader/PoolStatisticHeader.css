@@ -31,3 +31,9 @@
   margin: 4px 0 0 0;
   color: var(--text_tertiary);
 }
+
+@media (max-width: 600px) {
+  .PoolStatisticHeader__icon {
+    display: none;
+  }
+}

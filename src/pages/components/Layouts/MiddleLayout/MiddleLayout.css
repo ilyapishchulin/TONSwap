@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
 
+  margin: 32px 0;
   min-height: calc(var(--page_min_height) - var(--page_vertical_margin) * 2);
 }
 
@@ -15,4 +16,11 @@
 
   padding: 0 16px;
   background: var(--island_background);
+}
+
+@media (max-width: 730px) {
+  .MiddleLayout {
+    max-width: 358px;
+    margin: 0 16px;
+  }
 }

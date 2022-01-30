@@ -16,6 +16,8 @@ export const PoolStatisticGraph: FC = () => {
     return null;
   }
 
+  // Temporary variable, should be adaptive service for mobiles with hooks, but now we haven't time for this
+  const isMobile = document.body.clientWidth <= 600;
   return (
     <ResponsiveContainer className="PoolStatisticGraph" width="100%" height="100%">
       <AreaChart
@@ -29,7 +31,7 @@ export const PoolStatisticGraph: FC = () => {
       >
         <CartesianGrid />
         <XAxis tickFormatter={getHourAndMinutesByUNIX} dataKey="time" />
-        <YAxis tickFormatter={getFormattedCurrency} />
+        {!isMobile && <YAxis tickFormatter={getFormattedCurrency} />}
         <Tooltip cursor={{ stroke: 'var(--stroke_primary)' }} content={<PoolStatisticGraphCursor />} />
         <Area isAnimationActive={false} type="monotoneX" dataKey="price" />
       </AreaChart>

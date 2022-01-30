@@ -1,5 +1,6 @@
 import { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import './AllPools.css';
 
 import { EPages } from 'enums/EPages';
 import { router } from 'utils/router';
@@ -35,7 +36,7 @@ export const AllPools: FC = () => {
 
   return (
     <Table>
-      <TableCellWrapper>
+      <TableCellWrapper className="AllPoolsHeaderWrapper">
         <TableHeader>
           <Title level="2" weight="extrabold">All Pools</Title>
         </TableHeader>

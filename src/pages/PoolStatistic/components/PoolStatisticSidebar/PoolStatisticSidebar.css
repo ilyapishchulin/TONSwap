@@ -2,3 +2,9 @@
   margin: 16px 0 0 32px;
   min-width: 226px;
 }
+
+@media (max-width: 924px) {
+  .PoolStatisticSidebar {
+    margin-left: 0;
+  }
+}

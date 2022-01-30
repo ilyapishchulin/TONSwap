@@ -12,6 +12,9 @@ import { Portal } from 'components/Portal/Portal';
 import { Subhead } from 'components/Typography/Subhead/Subhead';
 import { PageHeaderLoginInfoPopoutCell } from './components/PageHeaderLoginInfoPopoutCell/PageHeaderLoginInfoPopoutCell';
 
+const POPOUT_TOP_MARGIN = 12;
+const POPOUT_WIDTH = 214;
+
 export const PageHeaderLoginInfoPopout: FC<TPageHeaderLoginInfoPopout> = ({ headerRef, onClose }) => {
   const balance = useSelector(selectBalance);
   const name = useSelector(selectName);
@@ -26,9 +29,8 @@ export const PageHeaderLoginInfoPopout: FC<TPageHeaderLoginInfoPopout> = ({ head
   }
 
   const blockInfo = headerRef.current.getBoundingClientRect();
-
   return (
-    <Portal className="PageHeaderLoginInfoPopout" style={{ top: `${blockInfo.top + blockInfo.height + 12}px`, left: `${blockInfo.left + blockInfo.width - 214}px` }}>
+    <Portal className="PageHeaderLoginInfoPopout" style={{ top: `${blockInfo.top + blockInfo.height + POPOUT_TOP_MARGIN}px`, left: `${blockInfo.left + blockInfo.width - POPOUT_WIDTH}px` }}>
       <div className="PageHeaderLoginInfoPopoutProfile">
         <Subhead className="PageHeaderLoginInfoPopoutProfile__name" weight="bold">{name}</Subhead>
         <div className="PageHeaderLoginInfoPopoutProfileFields">

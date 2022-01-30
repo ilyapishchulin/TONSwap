@@ -1,4 +1,19 @@
 .PoolStatisticColumn {
   flex: 1 1 0;
-  height: calc(var(--page_min_height) - var(--page_vertical_margin) * 4);
+  max-height: calc(var(--page_min_height) - var(--page_vertical_margin) * 4);
 }
+
+@media (max-width: 924px) {
+  .PoolStatisticColumn {
+    height: 80vh;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .PoolStatisticColumn {
+    height: 40vh;
+    margin-bottom: 100px;
+  }
+}
+

@@ -7,8 +7,9 @@
   user-select: none;
 
   background: var(--island_background);
-  box-shadow: 0 4px 38px rgba(0, 0, 0, .02);
   border-radius: 16px;
+
+  box-shadow: var(--profile_popover_shadow);
 }
 
 .PageHeaderLoginInfoPopoutProfile {

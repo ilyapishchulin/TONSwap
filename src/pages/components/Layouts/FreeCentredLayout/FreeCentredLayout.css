@@ -9,3 +9,19 @@
   max-width: 688px;
   width: 100%;
 }
+
+@media (max-width: 924px) {
+  .FreeCentredLayoutWrapper {
+    margin-top: 0;
+  }
+
+  .FreeCentredLayout {
+    margin: 18px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .FreeCentredLayout {
+    margin-bottom: 60px;
+  }
+}

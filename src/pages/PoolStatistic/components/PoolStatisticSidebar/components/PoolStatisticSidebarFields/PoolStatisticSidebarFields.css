@@ -5,3 +5,10 @@
   box-shadow: 0 4px 250px rgba(0, 0, 0, .02);
   border-radius: 20px;
 }
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .PoolStatisticSidebarFields {
+    max-width: 400px;
+    margin: auto;
+  }
+}

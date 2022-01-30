@@ -5,3 +5,15 @@
   user-select: none;
   margin: 0 100px;
 }
+
+@media (max-width: 730px) {
+  .PageHeader {
+    margin: 0 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .PageHeader {
+    margin: 0 16px;
+  }
+}

@@ -26,11 +26,13 @@
   color: var(--severity_red);
 }
 
-.PoolCellAPY {
-}
-
 .PoolCellAPY span {
   display: block;
-  /*margin-left: 24px;*/
   margin-right: 12px;
+}
+
+@media (max-width: 600px) {
+  .PoolCell td:not(:first-child) {
+    display: none;
+  }
 }
