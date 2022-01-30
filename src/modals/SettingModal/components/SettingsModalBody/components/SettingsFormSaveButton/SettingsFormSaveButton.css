@@ -11,6 +11,14 @@
   border-radius: 16px;
 }
 
+.SettingsFormSaveButton:hover {
+  background: var(--accent_background_hover);
+}
+
+.SettingsFormSaveButton:active {
+  background: var(--accent_background_click);
+}
+
 .SettingsFormSaveButton__text {
   color: var(--accent_color);
 }

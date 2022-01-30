@@ -1,0 +1,27 @@
+.PageHeaderLoginInfoPopoutCell {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  margin: 2px 0;
+  padding: 0 6px;
+
+  border-radius: 8px;
+}
+
+.PageHeaderLoginInfoPopoutCell:hover {
+  background: var(--tertiary_background);
+}
+
+.PageHeaderLoginInfoPopoutCell__icon {
+  margin-right: 12px;
+  color: var(--text_secondary);
+}
+
+.PageHeaderLoginInfoPopoutCell__text {
+  margin: 0;
+  padding: 8px 0;
+
+  color: var(--text_primary);
+}

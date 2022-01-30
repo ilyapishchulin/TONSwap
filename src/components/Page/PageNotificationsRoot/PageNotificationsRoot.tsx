@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { selectSnackbarNotification } from 'store/router/selectors/selectSnackbarNotification';
 
 export const PageNotificationsRoot: FC = () => {
-  const snackbarNotification: any = useSelector(selectSnackbarNotification);
+  const snackbarNotification = useSelector(selectSnackbarNotification);
   if (!snackbarNotification) {
     return null;
   }

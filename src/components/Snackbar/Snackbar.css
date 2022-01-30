@@ -14,7 +14,7 @@
   animation-fill-mode: forwards;
 
   background: var(--island_background);
-  box-shadow: 0 4px 36px rgba(0, 0, 0, .05);
+  box-shadow: 0 4px 36px rgba(var(--default_shadow), .05);
   border-radius: 16px;
 }
 
@@ -49,14 +49,14 @@
 
   to {
     opacity: 0;
-    right: -50px;
+    right: 0;
   }
 }
 
 @keyframes horizontal-intro {
   from {
     opacity: 0;
-    right: -50px;
+    right: 0;
   }
 
   to {

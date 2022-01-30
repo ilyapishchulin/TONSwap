@@ -46,6 +46,8 @@ body {
     --text_secondary: #6C6C6C;
     --text_quartenary: #B6B6B6;
     --text_tertiary: #A8A8A8;
+
+    --default_shadow: 0, 0, 0;
   }
 }
 
@@ -93,5 +95,7 @@ body {
     --text_secondary: #C0C0C0;
     --text_quartenary: #A0A0A0;
     --text_tertiary: #8D8D8D;
+
+    --default_shadow: none;
   }
 }

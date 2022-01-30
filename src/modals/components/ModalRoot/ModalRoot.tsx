@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { TModalRoot } from './TModalRoot';
 import './ModalRoot.css';
 
+import { router } from 'utils/router';
 import { EModals } from 'enums/EModals';
 
 import { SettingsModal } from 'modals/SettingModal/SettingsModal';
@@ -35,7 +36,7 @@ export const ModalRoot: FC<TModalRoot> = () => {
   }
 
   return (
-    <Portal className="ModalRootWrapper">
+    <Portal onClick={router.closeModal} className="ModalRootWrapper">
       <div id={activeModal} className="ModalRoot" onClick={(e) => e.stopPropagation()}>
         <ModalComponent />
       </div>

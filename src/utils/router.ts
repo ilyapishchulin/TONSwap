@@ -19,8 +19,7 @@ class routerUtils {
   }
 
   onPopstate(e: PopStateEvent) {
-    const { page } = e.state;
-    dispatch(setActivePage(page ? getPageByPathAndSetIdInStore(e.state?.page) : EPages.HOME));
+    dispatch(setActivePage(getPageByPathAndSetIdInStore(e.state?.page || window.location.pathname)));
   }
 
   closeModal() {
@@ -41,7 +40,10 @@ class routerUtils {
       page = page.replace(':id', routerParams.id) as EPages;
     }
 
-    window.history.pushState({ page }, '', page);
+    const splitPaths = window.location.pathname.split('/');
+    splitPaths[splitPaths.length - 1] = page.replace('/', '');
+
+    window.history.pushState({ page }, '', splitPaths.join('/'));
   }
 
   openModal(modal: EModals, routerParams: TRouterParams = {}) {

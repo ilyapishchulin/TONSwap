@@ -1,5 +1,6 @@
 .PoolStatisticHeaderTab {
   cursor: pointer;
+  user-select: none;
 
   margin-right: 4px;
   border-radius: 12px;

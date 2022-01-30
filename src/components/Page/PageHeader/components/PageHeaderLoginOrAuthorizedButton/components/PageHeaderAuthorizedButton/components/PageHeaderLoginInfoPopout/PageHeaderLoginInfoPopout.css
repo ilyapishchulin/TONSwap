@@ -1,0 +1,74 @@
+.PageHeaderLoginInfoPopout {
+  position: absolute;
+  width: 214px;
+
+  padding: 4px 6px;
+  animation: openBlock 150ms;
+  user-select: none;
+
+  background: var(--island_background);
+  box-shadow: 0 4px 38px rgba(0, 0, 0, .02);
+  border-radius: 16px;
+}
+
+.PageHeaderLoginInfoPopoutProfile {
+  display: flex;
+  align-items: center;
+}
+
+.PageHeaderLoginInfoPopoutProfile__name {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 12px 0 6px;
+  color: var(--accent_color);
+  background: var(--primary_background);
+  border-radius: 36px;
+}
+
+.PageHeaderLoginInfoPopoutProfileFields {
+  overflow: hidden;
+  padding: 6px 6px 6px 0;
+}
+
+.PageHeaderLoginInfoPopoutProfileFields__walletId,
+.PageHeaderLoginInfoPopoutProfileFields__balance {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.PageHeaderLoginInfoPopoutProfileFields__walletId {
+  direction: rtl;
+
+  margin: 0 4px 0 0;
+  color: var(--text_primary);
+}
+
+.PageHeaderLoginInfoPopoutProfileFields__balance {
+  margin: 4px 0 0 0;
+  color: var(--text_quartenary);
+}
+
+.PageHeaderLoginInfoPopoutSeparator {
+  border: none;
+  height: 1px;
+
+  margin: 4px 12px;
+  background: var(--stroke_separator);
+}
+
+@keyframes openBlock {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

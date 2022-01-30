@@ -57,7 +57,7 @@ export const SettingsModalBody: FC = () => {
     dispatch(setSlippageTolerance(slippageToleranceState));
     dispatch(setDurationLimit(durationLimitState));
     router.closeModal();
-  }
+  };
 
   return (
     <main>

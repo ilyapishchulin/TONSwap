@@ -7,18 +7,13 @@ import { selectActivePage } from 'store/router/selectors/selectActivePage';
 import { SwapTokens } from 'pages/SwapTokens/SwapTokens';
 import { PoolsPage } from 'pages/PoolsPage/PoolsPage';
 import { CreateLiquidity } from 'pages/CreateLiquidity/CreateLiquidity';
-import { PoolStatistic } from '../../PoolStatistic/PoolStatistic';
+import { PoolStatistic } from 'pages/PoolStatistic/PoolStatistic';
 
 export const PagesRoot = () => {
   const activePage = useSelector(selectActivePage);
 
-  let PageComponent = null
+  let PageComponent;
   switch (activePage) {
-    case EPages.HOME:
-    case EPages.SWAP:
-      PageComponent = SwapTokens;
-      break;
-
     case EPages.POOLS:
       PageComponent = PoolsPage;
       break;
@@ -30,10 +25,12 @@ export const PagesRoot = () => {
     case EPages.POOL_STATISTIC:
       PageComponent = PoolStatistic;
       break;
-  }
 
-  if (!PageComponent) {
-    return null;
+    case EPages.HOME:
+    case EPages.SWAP:
+    default:
+      PageComponent = SwapTokens;
+      break;
   }
 
   return <PageComponent />;
