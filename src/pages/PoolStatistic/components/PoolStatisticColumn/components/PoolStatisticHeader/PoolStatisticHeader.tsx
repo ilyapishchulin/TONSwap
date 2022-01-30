@@ -1,11 +1,15 @@
 import { FC } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './PoolStatisticHeader.css';
 
 import { router } from 'utils/router';
 import { ETokenImages } from 'enums/ETokenImages';
+import { EGraphIntervals } from 'enums/EGraphIntervals';
 
 import { selectCurrentPool } from 'store/currentPool/selectors/selectCurrentPool';
+import { setGraphInterval } from 'store/currentPool/sets/setGraphInterval';
+import { requestGraphByIntervalSend } from 'store/sags/requestGraphByInterval/requestGraphByIntervalSend';
+
 import { ReactComponent as Icon20CloseOutline } from 'icons/20/close.svg';
 
 import { TokenStack } from 'components/Tokens/TokenStack/TokenStack';
@@ -19,10 +23,16 @@ import { PoolStatisticHeaderSkeleton } from '../PoolStatsticHeaderSkeleton/PoolS
 
 export const PoolStatisticHeader: FC = () => {
   const currentPool = useSelector(selectCurrentPool);
+  const dispatch = useDispatch();
 
   if (!currentPool.firstPoolToken  || !currentPool.secondPoolToken) {
     return <PoolStatisticHeaderSkeleton />;
   }
+
+  const selectGraphInterval = (interval: EGraphIntervals) => {
+    dispatch(setGraphInterval(interval));
+    dispatch(requestGraphByIntervalSend());
+  };
 
   return (
     <header className="PoolStatisticHeader">
@@ -33,9 +43,14 @@ export const PoolStatisticHeader: FC = () => {
         <Subhead className="PoolStatisticHeaderFields__tickers" weight="semibold">{currentPool.firstPoolToken.ticker}-{currentPool.secondPoolToken.ticker}</Subhead>
       </div>
       <PoolStatisticHeaderTabs>
-        <PoolStatisticHeaderTab active title="T" />
-        <PoolStatisticHeaderTab title="M" />
-        <PoolStatisticHeaderTab title="Y" />
+        {Object.values(EGraphIntervals).map((item) => (
+          <PoolStatisticHeaderTab
+            key={item}
+            active={item === currentPool.graphInterval}
+            title={item}
+            onClick={() => selectGraphInterval(item)}
+          />
+        ))}
       </PoolStatisticHeaderTabs>
     </header>
   );

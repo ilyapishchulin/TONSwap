@@ -1,3 +1,4 @@
 export type TPoolStatisticSidebarFiledVolume = {
-  percents: number;
+  volume: number;
+  volumeDiff: number;
 };

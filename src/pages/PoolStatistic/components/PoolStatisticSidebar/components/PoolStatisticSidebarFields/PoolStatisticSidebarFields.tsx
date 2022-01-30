@@ -18,7 +18,7 @@ export const PoolStatisticSidebarFields: FC = () => {
 
   return (
     <div className="PoolStatisticSidebarFields">
-      <PoolStatisticSidebarFiledVolume percents={50} />
+      <PoolStatisticSidebarFiledVolume volume={currentPool.dayVolume} volumeDiff={currentPool.dayVolumeDiff} />
       <PoolStatisticPoolMakeUp
         firstToken={currentPool.firstPoolToken}
         firstMakeUp={currentPool.firstPoolMakeup}

@@ -1,11 +1,12 @@
 import { TCurrentPoolStore } from './TCurrentPoolStore';
+import { EGraphIntervals } from 'enums/EGraphIntervals';
 
 export const currentPoolStore: TCurrentPoolStore = {
-  graphs: [],
+  graph: [],
+  graphInterval: EGraphIntervals.HOUR,
   volume: '',
-  dayVolume: '',
-  dayVolumeDiff: '',
-  selectedTimeGraph: '',
+  dayVolume: 0,
+  dayVolumeDiff: 0,
   firstPoolToken: undefined, // Set default undefined value for spread in clearState
   secondPoolToken: undefined,
   firstPoolMakeup: '',

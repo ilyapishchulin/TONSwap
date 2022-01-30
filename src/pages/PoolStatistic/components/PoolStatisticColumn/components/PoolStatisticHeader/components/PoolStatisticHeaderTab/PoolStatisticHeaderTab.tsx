@@ -6,8 +6,8 @@ import { classNames } from 'utils/classNames';
 
 import { Text } from 'components/Typography/Text/Text';
 
-export const PoolStatisticHeaderTab: FC<TPoolStatisticHeaderTab> = memo(({ title, active }) => (
-  <div className={classNames('PoolStatisticHeaderTab', {
+export const PoolStatisticHeaderTab: FC<TPoolStatisticHeaderTab> = memo(({ onClick, title, active }) => (
+  <div onClick={onClick} className={classNames('PoolStatisticHeaderTab', {
     'PoolStatisticHeaderTab--active': active,
   })}>
     <Text weight="semibold">{title}</Text>

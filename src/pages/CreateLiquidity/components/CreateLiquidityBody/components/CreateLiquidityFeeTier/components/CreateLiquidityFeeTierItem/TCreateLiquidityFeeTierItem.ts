@@ -1,6 +1,7 @@
 import { HTMLAttributes } from 'react';
+import { EFeeTiers } from 'enums/EFeeTiers';
 
 export type TCreateLiquidityFeeTierItem = HTMLAttributes<HTMLDivElement> & {
-  number: number;
+  number: EFeeTiers;
   active?: boolean;
 };

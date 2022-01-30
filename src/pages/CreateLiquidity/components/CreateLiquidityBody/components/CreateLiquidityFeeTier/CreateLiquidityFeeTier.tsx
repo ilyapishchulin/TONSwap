@@ -23,12 +23,12 @@ export const CreateLiquidityFeeTier: FC = () => {
     <div className="CreateLiquidityFeeTier">
       <Headline className="CreateLiquidityFeeTier__text" weight="semibold">Fee tier</Headline>
       <CreateLiquidityFeeTierItems>
-        {Object.values(EFeeTiers).filter((item) => typeof item !== 'string').map((item) => (
+        {Object.values(EFeeTiers).map((item) => (
           <CreateLiquidityFeeTierItem
             key={item}
             active={feeTier === item}
-            number={item as EFeeTiers}
-            onClick={() => onSelectTier(item as EFeeTiers)}
+            number={item}
+            onClick={() => onSelectTier(item)}
           />
         ))}
       </CreateLiquidityFeeTierItems>

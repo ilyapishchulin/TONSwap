@@ -12,14 +12,14 @@ import { PoolStatisticGraphCursor } from './components/PoolStatisticGraphCursor/
 
 export const PoolStatisticGraph: FC = () => {
   const currentPool = useSelector(selectCurrentPool);
-  if (currentPool.graphs.length === 0) {
+  if (currentPool.graph.length === 0) {
     return null;
   }
 
   return (
     <ResponsiveContainer className="PoolStatisticGraph" width="100%" height="100%">
       <AreaChart
-        data={currentPool.graphs}
+        data={currentPool.graph}
         margin={{
           top: 16,
           right: 0,

@@ -7,4 +7,5 @@ export enum EAPIMethods {
   LIQUIDITY = 'Liquidity.php',
   LIQUIDITY_ADD = 'LiquidityAdd.php',
   POOL_STATISTIC = 'Pool.php',
+  GRAPH_BY_INTERVAL = 'GraphByInterval.php',
 }
