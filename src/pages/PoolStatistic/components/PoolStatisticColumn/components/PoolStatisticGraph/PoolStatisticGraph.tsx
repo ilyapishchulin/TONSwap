@@ -10,6 +10,8 @@ import { selectCurrentPool } from 'store/currentPool/selectors/selectCurrentPool
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { PoolStatisticGraphCursor } from './components/PoolStatisticGraphCursor/PoolStatisticGraphCursor';
 
+const KEYS_COUNT_FOR_DISABLED_ANIMATION = 50;
+
 export const PoolStatisticGraph: FC = () => {
   const currentPool = useSelector(selectCurrentPool);
   if (currentPool.graph.length === 0) {
@@ -33,7 +35,7 @@ export const PoolStatisticGraph: FC = () => {
         <XAxis tickFormatter={getHourAndMinutesByUNIX} dataKey="time" />
         {!isMobile && <YAxis tickFormatter={getFormattedCurrency} />}
         <Tooltip cursor={{ stroke: 'var(--stroke_primary)' }} content={<PoolStatisticGraphCursor />} />
-        <Area type="monotoneX" dataKey="price" />
+        <Area isAnimationActive={currentPool.graph.length <= KEYS_COUNT_FOR_DISABLED_ANIMATION} type="monotoneX" dataKey="price" />
       </AreaChart>
     </ResponsiveContainer>
   );
