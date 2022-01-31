@@ -26,7 +26,7 @@ export const PageHeaderAuthorizedButton: FC = () => {
     <>
       <div ref={headerRef} onClick={toggleOpened} className="PageHeaderAuthorizedButton">
         <Subhead className="PageHeaderAuthorizedButton__name" weight="bold">{name}</Subhead>
-        <Subhead className="PageHeaderAuthorizedButton__balance" weight="bold">{1 || balance['TON']} TON</Subhead>
+        <Subhead className="PageHeaderAuthorizedButton__balance" weight="bold">{balance['TON']} TON</Subhead>
         <Icon12DropdownOutline className="PageHeaderAuthorizedButton__icon" />
       </div>
       {isOpened && <PageHeaderLoginInfoPopout onClose={() => setIsOpened(false)} headerRef={headerRef} />}
