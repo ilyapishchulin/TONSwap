@@ -6,6 +6,11 @@
   margin-top: 24px;
 }
 
+.SettingsFormItem--focused .SettingsFormItemFields {
+  border: 1px solid var(--accent_color);
+  box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.15);
+}
+
 .SettingsFormItem__top {
   color: var(--text_secondary);
   margin: 0 12px 0 0;
@@ -20,6 +25,10 @@
   border-radius: 12px;
 
   margin: 12px 0;
+}
+
+.SettingsFormItem:not(.SettingsFormItem--focused) .SettingsFormItemFields:hover {
+  border: 1px solid var(--stroke_secondary);
 }
 
 .SettingsFormItemFields__input {

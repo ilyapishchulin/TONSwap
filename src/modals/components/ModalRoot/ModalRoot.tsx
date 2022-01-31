@@ -12,6 +12,7 @@ import { SwapConfirmation } from 'modals/SwapConfirmation/SwapConfirmation';
 
 import { selectActiveModal } from 'store/router/selectors/selectActiveModal';
 import { Portal } from 'components/Portal/Portal';
+import { RemoveLiquidity } from '../../RemoveLiquidity/RemoveLiquidity';
 
 export const ModalRoot: FC<TModalRoot> = () => {
   const activeModal = useSelector(selectActiveModal);
@@ -28,6 +29,10 @@ export const ModalRoot: FC<TModalRoot> = () => {
 
     case EModals.SWAP_CONFIRMATION:
       ModalComponent = SwapConfirmation;
+      break;
+
+    case EModals.REMOVE_LIQUIDITY:
+      ModalComponent = RemoveLiquidity;
       break;
   }
 

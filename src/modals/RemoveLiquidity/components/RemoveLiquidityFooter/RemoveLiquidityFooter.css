@@ -1,0 +1,33 @@
+.RemoveLiquidityFooterButton {
+  cursor: pointer;
+  padding: 15px;
+
+  background: var(--severity_red_background);
+  border-radius: 16px;
+
+  border: none;
+  outline: none;
+
+  width: calc(100% - 40px);
+  margin: 0 20px 20px 20px;
+}
+
+.RemoveLiquidityFooterButton:hover {
+  background: var(--severity_red_background_hover);
+}
+
+.RemoveLiquidityFooterButton:active {
+  background: var(--severity_red_background_click);
+}
+
+.RemoveLiquidityFooterButton[disabled] {
+  cursor: default;
+  opacity: .5;
+
+  background: var(--severity_red_background);
+}
+
+.RemoveLiquidityFooterButton__text {
+  margin: 0;
+  color: var(--severity_red);
+}

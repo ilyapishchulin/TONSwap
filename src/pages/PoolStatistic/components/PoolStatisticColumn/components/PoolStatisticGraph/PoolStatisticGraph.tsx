@@ -33,7 +33,7 @@ export const PoolStatisticGraph: FC = () => {
         <XAxis tickFormatter={getHourAndMinutesByUNIX} dataKey="time" />
         {!isMobile && <YAxis tickFormatter={getFormattedCurrency} />}
         <Tooltip cursor={{ stroke: 'var(--stroke_primary)' }} content={<PoolStatisticGraphCursor />} />
-        <Area isAnimationActive={false} type="monotoneX" dataKey="price" />
+        <Area type="monotoneX" dataKey="price" />
       </AreaChart>
     </ResponsiveContainer>
   );

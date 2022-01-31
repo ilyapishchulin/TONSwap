@@ -7,6 +7,11 @@
   border: 1px solid var(--stroke_tertiary);
 }
 
+.TokensPairLabel--focused {
+  border: 1px solid var(--accent_color);
+  box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.15);
+}
+
 .TokensPairLabel:not(:first-child) {
   margin-top: 12px;
 }
@@ -26,6 +31,10 @@
 
   box-sizing: border-box;
   color: var(--text_primary);
+}
+
+.TokensPairLabel:not(.TokensPairLabel--focused):not(.TokensPairLabel--disabled):hover {
+  border: 1px solid var(--stroke_secondary);
 }
 
 .TokensPairLabelInput::placeholder {

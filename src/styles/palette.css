@@ -42,9 +42,12 @@ body {
   --skeleton_bone: #F1F1F1;
 
   --severity_red: #DA1919;
-  --severity_red_background: rgba(243, 27, 27, .05);
   --severity_orange: #FF8616;
   --severity_green: #3BCA09;
+
+  --severity_red_background: rgba(243, 27, 27, .05);
+  --severity_red_background_hover: rgba(243, 27, 27, .15);
+  --severity_red_background_click: rgba(243, 27, 27, .1);
 
   --text_primary: #303757;
   --text_secondary: #6C6C6C;

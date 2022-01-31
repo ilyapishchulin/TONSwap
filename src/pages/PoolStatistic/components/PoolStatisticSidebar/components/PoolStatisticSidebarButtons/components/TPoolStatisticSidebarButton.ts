@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes } from 'react';
 
-export type TPoolStatisticSidebarButton = {
+export type TPoolStatisticSidebarButton = HTMLAttributes<HTMLButtonElement> & {
   text: string;
   Icon: FC<HTMLAttributes<HTMLOrSVGElement>>;
 };
